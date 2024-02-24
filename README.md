@@ -1,23 +1,25 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+Análise e Desenvolvimento de Sistemas - PUC Minas
 
-`DISCIPLINA`
+Projeto: Desenvolvimento de um Sistema Sociotécnico Inovador
 
-`SEMESTRE`
+Eixo 5 - Turma 5 - Grupo 2
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Desenvolvimento de uma aplicacao de agendamento online e gerenciamento de uma barbearia.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Gabriela Franca Alves Miranda
+* Mariana Julia Estevam Correa
+* Guilherme Correa Gomes
+* Gabriel de Souza Ferreira
+* Pedro de Souza Ferreira
+* Lucas Damasceno Pinto
 
 ## Orientador
 
-* Nome completo do professor 1
+* José Wilson
 
 ## Instruções de utilização
 
