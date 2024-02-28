@@ -35,7 +35,7 @@ Colocar a imagem do modelo construído apresentando a proposta de solução.
 
 ### Alexandre Godoy
 
-- **Idade:** 25 anos
+- **Idade:** 55 anos
 - **Ocupação:** Funcionário da Barbearia.
 - **Caso de uso:** Quer poder acompanhar e gerenciaros clientes que agendaram serviços com ele.
 - **Necessidade:** O desejo de Alexandre é que ele possa acompanhar os agendamentos dos clientes para poder gerenciar melhor seu tempo.
