@@ -56,7 +56,15 @@ O desenvolvimento de uma solucao para a Barbearia é essencial para:
 
 ## Relação com a Extensão Universitária
 
-Relacionar a situação-problema da organização com o impacto social esperado com a implantação do sistema sociotécnico.
+O desenvolvimento da solução vai envolver a aplicação prática de conhecimentos de programação, design, gestão de projetos, e outras áreas relacionadas. Isso vai nos proporcionar, como alunos, uma oportunidade de aplicar o que aprendemos em sala de aula em um projeto do mundo real.
+
+A aplicação é uma ferramenta que pode ser utilizada para interagir com a comunidade, neste caso, os prestadores de serviço e clientes. A interação com a Comunidade se alinha com a abordagem da Extensão Universitária de estabelecer conexões e trocas de conhecimento entre a universidade e a sociedade. Também proporcionar, por outro lado, um benefício para o dono da Barbearia, com algumas automações de processos.
+
+O projeto visa atender às necessidades específicas do proprietario e dos clientes, proporcionando um serviço que facilita a interação. Isso se assemelha à Extensão Universitária, que procura responder a demandas da sociedade com a aplicação de conhecimentos acadêmicos. Esta parte de poder aplicar nosso aprendizado para atender as necessidades reais de uma empresa está dentro dos objetivos da extensão.
+
+Este projeto nos oferece a oportunidade de desenvolver habilidades de comunicação, colaboração e resolução de problemas ao trabalhar em conjunto com uma empresa real e entender as necessidades dos proprietarios e clientes.
+
+Ao criar uma solução que simplifica o processo de agendamento de serviços e gerenciamento de estoque para a empresa promove a melhora na experiência dos clientes, o projeto contribui para a melhoria do ambiente de negócios e da interação cliente com a empresa, o que tem um impacto positivo na sociedade sendo um ponto extremamente relevante para nós, para a universidade e para a sociedade em geral.
 
 ## Descrição do Parceiro
 
