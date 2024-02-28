@@ -20,6 +20,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
+|-------|-------------------------|----|
 |RF-001|Permitir que os clientes se cadastrem e efetuem login na aplicação |ALTA|
 |RF-002|Permitir que os clientes atalizem seus dados e redefinição de senha |ALTA|
 |RF-003| Permitir que o usuário (clientes) agendem serviços online | ALTA | 
