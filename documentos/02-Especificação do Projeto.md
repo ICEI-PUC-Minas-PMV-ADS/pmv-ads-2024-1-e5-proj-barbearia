@@ -6,6 +6,30 @@ A base para a construção do presente projeto consiste na criação de uma apli
 
 o	Descreva brevemente a arquitetura definida para o projeto e as tecnologias a serem utilizadas. Sugere-se a criação de um diagrama de componentes da solução.
 
+## Tecnologias Utilizadas
+
+- **IDE: 
+
+- **Ferramentas de comunicação: teams e discord
+
+- **Ferramenta para desenho de tela: 
+
+- **Gerenciamento do Projeto: Github Projects
+
+- **Repositório do código fonte: Github
+
+- **Linguagens utilizadas no Front-end: Html, css, javascript
+
+- **Linguagem utilizada no Back-end: 
+
+- **Framework Front-end: Bootstrap
+
+- **Framework para integração entre back-end e banco de dados: 
+
+- **Banco de Dados: 
+
+- **Servidor em nuvem para banco de dados: 
+
 ## Project Model Canvas
 
 Colocar a imagem do modelo construído apresentando a proposta de solução.
