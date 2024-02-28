@@ -28,22 +28,20 @@ Colocar a imagem do modelo construído apresentando a proposta de solução.
 
 - **Idade:** 
 - **Ocupação:** Dono da Barbearia Vintage
-- **Caso de uso:** Quer oferecer para seus clientes agendandamento de serviços de sua barbearia de forma on-line.
-- **Necessidade:** O desejo de Victor é que ele possa oferecer agendamento on-line para seus clientes além de poder gerenciar os agendamentos.
-
-### Victor
-
-- **Idade:** 
-- **Ocupação:** Dono da Barbearia Vintage
-- **Caso de uso:** Quer poder acompanhar e gerenciar o estoque dos produtos utilizados na barbearia de forma on-line.
-- **Necessidade:** O desejo de Victor é que ele possa acompanhar a quantidade e utilização dos produtos da barbaria.
+- **Caso de uso1:** Quer oferecer para seus clientes agendandamento de serviços de sua barbearia de forma on-line.
+- **Necessidade1:** O desejo de Victor é que ele possa oferecer agendamento on-line para seus clientes além de poder gerenciar os agendamentos.
+- **Caso de uso2:** Quer poder acompanhar e gerenciar o estoque dos produtos utilizados na barbearia de forma on-line.
+- **Necessidade2:** O desejo de Victor é que ele possa acompanhar a quantidade e utilização dos produtos da barbaria.
 
 ### Alexandre Godoy
 
-- **Idade:** 
+- **Idade:** 25 anos
 - **Ocupação:** Funcionário da Barbearia.
 - **Caso de uso:** Quer poder acompanhar e gerenciaros clientes que agendaram serviços com ele.
 - **Necessidade:** O desejo de Alexandre é que ele possa acompanhar os agendamentos dos clientes para poder gerenciar melhor seu tempo.
+
+![persona 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/102702197/c1081a12-e31d-49d8-a224-b4186ff0352e)
+
 
 ## Requisitos
 
