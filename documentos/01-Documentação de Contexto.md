@@ -68,4 +68,9 @@ Ao criar uma solução que simplifica o processo de agendamento de serviços e g
 
 ## Descrição do Parceiro
 
-Apresente uma descrição resumida sobre a organização onde o projeto será desenvolvido para que possa ser compreendido o cenário sistema sociotécnico.
+A empresa parceira em questão refere-se a barbearia situada em Belo Horizonte (capital do estado de Minas Gerais). Especializada no zelo e estilização da barba, cabelo masculino, e uma variedade de procedimentos adicionais, a mencionada instituição destaca-se por sua dedicação à entrega de serviços personalizados, abrangendo desde cortes de cabelo contemporâneos até estilos clássicos de barba. A meticulosa seleção das mais excelentes ferramentas e produtos de cuidados masculinos constitui-se como a base para assegurar resultados excepcionais.
+
+Para além dos serviços convencionais de corte de cabelo e barba, a barbearia também dispõe de uma extensa gama de produtos masculinos, que incluem vestuário, gel para cabelos, gel para barbas, pentes para cabelos masculinos, e outros itens afins.
+
+A empresa enfrenta diversos desafios no que concerne às áreas de vendas e agendamentos, sendo que a implementação do sistema sociotécnico objetiva solucionar questões pertinentes a agendamento de horários, disponibilidade de produtos para venda no espaço, entre outros desafios inerentes ao contexto operacional da empresa.
+
