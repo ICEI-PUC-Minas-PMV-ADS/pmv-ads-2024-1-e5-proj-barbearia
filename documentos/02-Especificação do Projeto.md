@@ -13,6 +13,38 @@ Colocar a imagem do modelo construído apresentando a proposta de solução.
 > **Links Úteis**:
 > Disponíveis em material de apoio do projeto
 
+## Personas
+
+### Luiz Eduardo Marinho
+
+- **Idade:** 36 anos
+- **Ocupação:** Professor de escola pública
+- **Caso de Uso:** Quer agendar um corte de cabelo sem ir pessoalmente ou contactar algum funcionário da barbearia.
+- **Necessidade:** O desejo de Luiz é que ele possa de forma prática, simples e agil  fazer um agendamento de corte de cabelo.
+
+![persona 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/102702197/97e36056-3d8f-437e-93fc-d17ea9b8d3e0)
+
+### Victor
+
+- **Idade:** 
+- **Ocupação:** Dono da Barbearia Vintage
+- **Caso de uso:** Quer oferecer para seus clientes agendandamento de serviços de sua barbearia de forma on-line.
+- **Necessidade:** O desejo de Victor é que ele possa oferecer agendamento on-line para seus clientes além de poder gerenciar os agendamentos.
+
+### Victor
+
+- **Idade:** 
+- **Ocupação:** Dono da Barbearia Vintage
+- **Caso de uso:** Quer poder acompanhar e gerenciar o estoque dos produtos utilizados na barbearia de forma on-line.
+- **Necessidade:** O desejo de Victor é que ele possa acompanhar a quantidade e utilização dos produtos da barbaria.
+
+### Alexandre Godoy
+
+- **Idade:** 
+- **Ocupação:** Funcionário da Barbearia.
+- **Caso de uso:** Quer poder acompanhar e gerenciaros clientes que agendaram serviços com ele.
+- **Necessidade:** O desejo de Alexandre é que ele possa acompanhar os agendamentos dos clientes para poder gerenciar melhor seu tempo.
+
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
