@@ -10,7 +10,7 @@ Desenvolvimento de uma aplicacao de agendamento online e gerenciamento de uma ba
 
 ## Integrantes
 
-* Gabriela Franca Alves Miranda
+* Gabriela França Alves Miranda
 * Mariana Julia Estevam Correa
 * Guilherme Correa Gomes
 * Gabriel de Souza Ferreira
