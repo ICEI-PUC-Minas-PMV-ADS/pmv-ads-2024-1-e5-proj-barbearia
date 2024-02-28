@@ -24,7 +24,7 @@ Colocar a imagem do modelo construído apresentando a proposta de solução.
 
 ![persona 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/102702197/97e36056-3d8f-437e-93fc-d17ea9b8d3e0)
 
-### Victor
+### Victor Hugo Catarino Monteiro
 
 - **Idade:** 
 - **Ocupação:** Dono da Barbearia Vintage
