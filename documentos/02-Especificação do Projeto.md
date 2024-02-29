@@ -14,7 +14,7 @@ Diagrama de componentes da solução.
 
 - **Ferramentas de comunicação: teams e discord
 
-- **Ferramenta para desenho de tela: 
+- **Ferramenta para desenho de tela: Figma
 
 - **Gerenciamento do Projeto: Github Projects
 
@@ -28,9 +28,8 @@ Diagrama de componentes da solução.
 
 - **Framework para integração entre back-end e banco de dados: 
 
-- **Banco de Dados: 
-
-- **Servidor em nuvem para banco de dados: 
+- **Banco de Dados: MySql
+ 
 
 ## Project Model Canvas
 
