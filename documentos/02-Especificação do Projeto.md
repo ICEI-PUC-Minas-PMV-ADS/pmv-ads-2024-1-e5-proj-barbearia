@@ -6,9 +6,11 @@ A base para a construção do presente projeto consiste na criação de uma apli
 
 o	Descreva brevemente a arquitetura definida para o projeto e as tecnologias a serem utilizadas. Sugere-se a criação de um diagrama de componentes da solução.
 
+![ARQ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/102702197/5e5ac624-1627-4217-8776-f0b84fe5a0cb)
+
 ## Tecnologias Utilizadas
 
-- **IDE: 
+- **IDE: Visual Studio Code
 
 - **Ferramentas de comunicação: teams e discord
 
