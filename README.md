@@ -1,10 +1,10 @@
 # Barbearia Vintage
 
-Análise e Desenvolvimento de Sistemas - PUC Minas
+`Análise e Desenvolvimento de Sistemas - PUC Minas`
 
-Projeto: Desenvolvimento de um Sistema Sociotécnico Inovador
+`Projeto: Desenvolvimento de um Sistema Sociotécnico Inovador`
 
-Eixo 5 - Turma 5 - Grupo 2
+`Eixo 5 - Turma 5 - Grupo 2`
 
 Desenvolvimento de uma aplicacao de agendamento online e gerenciamento de uma barbearia.
 
