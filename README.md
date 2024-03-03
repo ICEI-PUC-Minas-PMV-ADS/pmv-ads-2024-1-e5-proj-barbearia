@@ -19,7 +19,7 @@ Desenvolvimento de uma aplicacao de agendamento online e gerenciamento de uma ba
 
 ## Orientador
 
-* José Wilson
+* José Wilson da Costa
 
 ## Instruções de utilização
 
