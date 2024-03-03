@@ -41,4 +41,4 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Apresentação
 
-<li><a href="presentation/README.md"> Apresentação da solução</a></li>
+ [Apresentação do projeto 1-etapa](https://youtu.be/dcQ_iOW6kng)
