@@ -65,7 +65,7 @@ Diagrama de componentes da solução.
 
 ### Alexandre Godoy
 
-- **Idade:** 55 anos
+- **Idade:** 45 anos
 - **Ocupação:** Funcionário da Barbearia.
 - **Caso de uso:** Quer poder acompanhar e gerenciaros clientes que agendaram serviços com ele.
 - **Necessidade:** O desejo de Alexandre é que ele possa acompanhar os agendamentos dos clientes para poder gerenciar melhor seu tempo.
@@ -77,7 +77,7 @@ Diagrama de componentes da solução.
 - **Idade:** 33
 - **Ocupação:** Cliente da barbearia
 - **Caso de uso:** Desejar marcar o atendimento com antencedencia e solicitar um atendimento especial.
-- **Necessidade:** Fernanda possui um filho autista, que necessida de atenção especial e tem sensibilidade ao barulho, por isso precisa de um atendimento especial.
+- **Necessidade:** Fernanda possui um filho autista, que necessita de atenção especial e tem sensibilidade ao barulho, por isso precisa de um atendimento especial.
 
  ![persona 4](https://img.freepik.com/vetores-gratis/ilustracao-desenhada-a-mao-dos-desenhos-animados-da-mae_23-2150464918.jpg)
 
