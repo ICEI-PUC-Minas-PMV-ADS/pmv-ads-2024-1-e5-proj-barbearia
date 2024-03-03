@@ -12,31 +12,35 @@ Diagrama de componentes da solução.
 
 - **IDE: Visual Studio Code
 
-- **Ferramentas de comunicação: teams e discord
+- **Ferramentas de comunicação: teams e discord**
 
-- **Ferramenta para desenho de tela: Figma
+- **Ferramenta para desenho de tela: **Figma
 
-- **Ferramentas de diagramação: Lucidchart
+- **Ferramentas de diagramação:** Lucidchart
 
-- **Gerenciamento do Projeto: Github Projects
+- **Gerenciamento do Projeto:** Github Projects
 
-- **Repositório do código fonte: Github
+- **Repositório do código fonte:** Github
 
-- **Linguagens utilizadas no Front-end: Html, css, javascript
+- **Linguagens utilizadas no Front-end:** HTML, CSS, JAVASCRIPT
 
-- **Linguagem utilizada no Back-end: 
+- **Linguagem utilizada no Back-end:** PHP, GOLANG
 
-- **Framework Front-end: Bootstrap
+- **Framework Front-end: Bootstrap**
 
-- **Framework para integração entre back-end e banco de dados: 
+- **Framework para integração entre back-end e banco de dados: **
 
-- **Banco de Dados: MySql
- 
+- **Banco de Dados:** MySql
+
+- **Infraestrutura**: Docker
+
+- **Cloud Publica**: AWS
 
 ## Project Model Canvas
 
 ![Project Model Canva](img/pmCanva.jpg)
 ## Personas
+
 
 ### Luiz Eduardo Marinho
 
@@ -45,7 +49,7 @@ Diagrama de componentes da solução.
 - **Caso de Uso:** Quer agendar um corte de cabelo sem ir pessoalmente ou contactar algum funcionário da barbearia.
 - **Necessidade:** O desejo de Luiz é que ele possa de forma prática, simples e agil  fazer um agendamento de corte de cabelo.
 
-![persona 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/102702197/97e36056-3d8f-437e-93fc-d17ea9b8d3e0)
+![persona 1](https://img.freepik.com/vetores-premium/homem-sentado-em-uma-cadeira-de-rodas-em-um-fundo-branco_165429-834.jpg?w=740)
 
 ### Victor Hugo Catarino Monteiro
 
@@ -56,6 +60,9 @@ Diagrama de componentes da solução.
 - **Caso de uso2:** Quer poder acompanhar e gerenciar o estoque dos produtos utilizados na barbearia de forma on-line.
 - **Necessidade2:** O desejo de Victor é que ele possa acompanhar a quantidade e utilização dos produtos da barbaria.
 
+
+![persona 1](https://img.freepik.com/vetores-gratis/menino-adolescente-com-cara-de-sorriso_1308-131110.jpg?w=740&t=st=1709488255~exp=1709488855~hmac=6b3c177f68c4cdae7d5807f524e78661a73191becec0c579af93d78ad85b2873)
+
 ### Alexandre Godoy
 
 - **Idade:** 55 anos
@@ -63,7 +70,16 @@ Diagrama de componentes da solução.
 - **Caso de uso:** Quer poder acompanhar e gerenciaros clientes que agendaram serviços com ele.
 - **Necessidade:** O desejo de Alexandre é que ele possa acompanhar os agendamentos dos clientes para poder gerenciar melhor seu tempo.
 
-![persona 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/102702197/c1081a12-e31d-49d8-a224-b4186ff0352e)
+![persona 3](https://img.freepik.com/vetores-premium/barbeiro-de-bigode-moderno-de-oculos-vestindo-camisa-calca-gravata-borboleta-com-suspensorios-segurando-o-pente-e-o-aparador-de-cabelo-em-ilustracao-vetorial-isolada-de-estilo-vintage_225004-2426.jpg)
+
+### Maria Fernanda 
+
+- **Idade:** 33
+- **Ocupação:** Cliente da barbearia
+- **Caso de uso:** Desejar marcar o atendimento com antencedencia e solicitar um atendimento especial.
+- **Necessidade:** Fernanda possui um filho autista, que necessida de atenção especial e tem sensibilidade ao barulho, por isso precisa de um atendimento especial.
+
+ ![persona 4](https://img.freepik.com/vetores-gratis/ilustracao-desenhada-a-mao-dos-desenhos-animados-da-mae_23-2150464918.jpg)
 
 
 ## Requisitos
@@ -87,7 +103,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-011|Enviar e-mail de lembrete para o cliente 1 (uma) hora antes do do horarios agendado |BAIXA| 
 |RF-012|Possibilitar a visualização de informações sobre a barbearia (endereço, telefone, horário de funcionamento, etc.) |MÉDIA| 
 |RF-013|Seção de contato para dúvidas e sugestões |BAIXA| 
-|RF-014|Disponibilização do link das redes sociais da barbearia na plataforma |BAIXA| 
+|RF-014|Disponibilização do link das redes sociais da barbearia na plataforma |BAIXA|
+|RF-015|Permitir que clientes selecionem se precisam de atendimento especial ou não. |ALTA| 
+
 
 ### Requisitos não Funcionais
 
@@ -98,6 +116,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-003| Sistema estável e sem erros |  ALTA |
 |RNF-004| O sistema deve funcionar em todos os navegadores).| ALTA | 
 |RNF-005| O sistema deve oferer tempo de carregamento rápido das páginas.| MÉDIA | 
+|RNF-006| O sistema deve utilizar docker para criação de containers| MÉDIA | 
+|RNF-007| O sistema deve ser hospedado em uma nuvem publica | MÉDIA | 
 
 
 ## Restrições
