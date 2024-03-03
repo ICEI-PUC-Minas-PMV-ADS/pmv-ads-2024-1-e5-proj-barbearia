@@ -74,16 +74,20 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |-------|-------------------------|----|
-|RF-001|Permitir que os clientes se cadastrem e efetuem login na aplicação |ALTA|
-|RF-002|Permitir que os clientes atalizem seus dados e redefinição de senha |ALTA|
-|RF-003| Permitir que o usuário (clientes) agendem serviços online | ALTA | 
-|RF-004| Permitir que a barbearia gerencie os agendamentos   | ALTA |
-|RF-005| Permitir que a barbearia e o cliente visualizem histórico de serviços agendados e realizados   | MÉDIA |
-|RF-006|Permitir que a barbearia gerencie o estoque de produtos utilizados pelos funcionários |MÁDIA|
-|RF-007|Enviar e-mail de lembrete para o cliente 1 (uma) hora antes do do horarios agendado |BAIXA| 
-|RF-008|Possibilitar a visualização de informações sobre a barbearia (endereço, telefone, horário de funcionamento, etc.) |MÉDIA| 
-|RF-009|Seção de contato para dúvidas e sugestões |BAIXA| 
-|RF-010|Integração com redes sociais |BAIXA| 
+|RF-001|Permitir que os funcionarios efetuem login na aplicação |ALTA|
+|RF-002|Permitir que os administradores cadastrem funcionarios e efetuem login na aplicação |ALTA|
+|RF-003|Permitir que os funcionarios e administradores redefinem a senha |ALTA|
+|RF-004|Permitir que os clientes agendem serviços online | ALTA | 
+|RF-005|Permitir que os clientes cancelem seus agendamentos | ALTA | 
+|RF-006|Permitir que a barbearia gerencie os agendamentos   | ALTA |
+|RF-007|Permitir que a barbearia e o cliente visualizem histórico de serviços agendados e realizados   | ALTA |
+|RF-008|Permitir que o administrador possa ofertar algum serviço gratuito para clientes fidelidades (O administrador decidira quantos cortes realizados para se tornar fidelidade)   | MEDIA |
+|RF-009|Disponibilizar relatorio para o administrador contendo serviços realizados, produtos vendidos e valores obtidos mensalmente | MÉDIA |
+|RF-010|Permitir que a barbearia gerencie o estoque de produtos |MÉDIA|
+|RF-011|Enviar e-mail de lembrete para o cliente 1 (uma) hora antes do do horarios agendado |BAIXA| 
+|RF-012|Possibilitar a visualização de informações sobre a barbearia (endereço, telefone, horário de funcionamento, etc.) |MÉDIA| 
+|RF-013|Seção de contato para dúvidas e sugestões |BAIXA| 
+|RF-014|Disponibilização do link das redes sociais da barbearia na plataforma |BAIXA| 
 
 ### Requisitos não Funcionais
 
@@ -91,9 +95,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ter interface simples e intuitiva, de fácil navegação| MÉDIA | 
 |RNF-002| Layout responsivo para adaptação a diferentes dispositivos (celulares, tablets, desktops) |  ALTA | 
-|RNF-002| Sistema estável e sem erros |  ALTA |
-|RNF-001|O sistema deve oferecer proteção dos dados dos clientes (criptografia, autenticação, etc.).| ALTA | 
-|RNF-001| O sistema deve oferer tempo de carregamento rápido das páginas.| MÉDIA | 
+|RNF-003| Sistema estável e sem erros |  ALTA |
+|RNF-004| O sistema deve funcionar em todos os navegadores).| ALTA | 
+|RNF-005| O sistema deve oferer tempo de carregamento rápido das páginas.| MÉDIA | 
 
 
 ## Restrições
