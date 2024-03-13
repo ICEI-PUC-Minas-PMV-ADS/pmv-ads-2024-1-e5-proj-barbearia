@@ -61,4 +61,17 @@ class LoginController extends Controller
         $status = $recovery->saveRecoveryInfo($recoveryInfo);
         return $status;
     }
+
+    public function checkToken(Request $request)
+    {
+        $data = [
+            'email' => $request->email,
+            'token' => $request->token
+        ];
+
+        $recovery = new PasswordReset();
+        $checkToken = $recovery->checkToken($data);
+        $return = $checkToken->getData();
+        return $return->data;
+    }
 }

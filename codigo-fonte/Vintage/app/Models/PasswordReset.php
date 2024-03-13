@@ -27,4 +27,23 @@ class PasswordReset extends Model
 
         return $recovery ? true : false;
     }
+
+    public function checkToken($data)
+    {
+        $user = User::where('email', $data['email'])->first();
+
+        if ($user) {
+            $validateToken = PasswordReset::where('email', $data['email'])
+                ->latest('created_at')
+                ->first();
+
+            if ($validateToken && $validateToken->token == $data['token']) {
+                return response()->json(['data' => 'Sucesso']);
+            } else {
+                return response()->json(['data' => 'O conjunto e-mail e token não foi encontrado.']);
+            }
+        }
+
+        return response()->json(['data' => 'Usuário não cadastrado']);
+    }
 }
