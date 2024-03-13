@@ -4,9 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
+use App\Mail\RecoveryPassword;
+use App\Models\PasswordReset;
 use App\Models\User;
 use Auth;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class LoginController extends Controller
 {
@@ -41,5 +45,20 @@ class LoginController extends Controller
         return response()->json([
             "message" => "Usuario invalido"
         ]);
+    }
+
+    public function sendEmailAndGenerateToken(Request $request)
+    {
+        $randomNumber = str_pad(mt_rand(1, 999999), 6, '0', STR_PAD_LEFT);
+        Mail::to($request->email)->send(new RecoveryPassword($randomNumber));
+        $recoveryInfo = [
+            'email' => $request->email,
+            'token' => $randomNumber,
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ];
+
+        $recovery = new PasswordReset();
+        $status = $recovery->saveRecoveryInfo($recoveryInfo);
+        return $status;
     }
 }
