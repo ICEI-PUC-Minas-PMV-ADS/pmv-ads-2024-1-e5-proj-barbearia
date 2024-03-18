@@ -5,7 +5,7 @@ Apresente os cenários de testes utilizados na realização dos testes da sua ap
 Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
 
 
-## 1. Requisitos de Autenticação e Gerenciamento de Usuários:
+## 1. Plano de testes dos Requisitos de Autenticação e Gerenciamento de Usuários:
    
 • RF-001: Permitir que os funcionários efetuem login na aplicação.
 
@@ -31,7 +31,7 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 
 
 
-## 2. Requisitos de Agendamento e Gerenciamento de Serviços:
+## 2. Plano de testes dos Requisitos de Agendamento e Gerenciamento de Serviços:
 
    
 • RF-004: Permitir que os clientes agendem serviços online
@@ -66,7 +66,7 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 
 
 
-## 3. Requisitos de Gerenciamento e Relatórios:
+## 3. Plano de testes dos Requisitos de Gerenciamento e Relatórios:
    
    
 • RF-008: Permitir que o administrador possa ofertar algum serviço gratuito para clientes fidelizados.
@@ -93,7 +93,7 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 
 
 
-## 4. Outros Requisitos Funcionais:
+## 4. Plano de testes dos Outros Requisitos Funcionais:
 
    
 • RF-011: Enviar e-mail de lembrete para o cliente 1 hora antes do horário agendado.
