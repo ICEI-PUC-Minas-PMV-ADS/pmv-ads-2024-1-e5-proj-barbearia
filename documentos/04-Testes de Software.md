@@ -6,6 +6,11 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 
 
 ## 1. Plano de testes dos Requisitos de Autenticação e Gerenciamento de Usuários:
+
+|  **Caso de Teste**  |  **CT-01  - Tentativa de login com credenciais válidas de funcionário.**  |
+|--|--|
+|Requisitos Associados:  |Permitir que os funcionários efetuem login na aplicação  | 
+|Critérios de Êxito:  | O funcionário é redirecionado para a página principal após o login bem-sucedido.|
    
 • RF-001: Permitir que os funcionários efetuem login na aplicação.
 
