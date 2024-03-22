@@ -26,6 +26,10 @@ class RecoveryPassword extends Mailable
     {
         return $this->subject('Recuperação de Senha')
                     ->view('emails.RecoveryPassword')
-                    ->with('token', $this->token);
+                    ->with('token', $this->token)
+                    ->attach(public_path('img/logo-vintage.jpg'), [
+                        'as' => 'logo-vintage.jpg',
+                        'mime' => 'image/jpeg',
+                    ]);
     }
 }
