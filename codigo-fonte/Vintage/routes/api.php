@@ -22,5 +22,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/register', [LoginController::class, 'register']);
 Route::post('/login', [LoginController::class, 'login']);
 
-Route::post('/recovery-password', [LoginController::class, 'sendEmailAndGenerateToken']);
-Route::get('/check-token', [LoginController::class, 'checkToken']);
+Route::prefix('recovery')->group(function () {
+    Route::post('/password', [LoginController::class, 'sendEmailAndGenerateToken']);
+    Route::get('/check-token', [LoginController::class, 'checkToken']);
+    Route::post('/new-password', [LoginController::class, 'newPassword']);
+});

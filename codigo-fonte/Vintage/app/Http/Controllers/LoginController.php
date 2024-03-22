@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginRequest;
+use App\Http\Requests\NewPassword;
 use App\Http\Requests\RegisterRequest;
 use App\Mail\RecoveryPassword;
 use App\Models\PasswordReset;
@@ -73,5 +74,19 @@ class LoginController extends Controller
         $checkToken = $recovery->checkToken($data);
         $return = $checkToken->getData();
         return $return->data;
+    }
+
+    public function newPassword (NewPassword $request) {
+        $newPassword = bcrypt($request->password);
+        $user = User::where('email', $request->email)->first();
+
+        if ($user) {
+            $user->password = $newPassword;
+            $user->save();
+
+            return response()->json(['message' => 'Senha atualizada com sucesso'], 200);
+        } else {
+            return response()->json(['message' => 'Usuário não encontrado'], 404);
+        }
     }
 }
