@@ -42,4 +42,23 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getEmployees () {
+        $users = User::all();
+        $employees = [];
+
+        foreach($users as $user) {
+            $creation_date = date('d/m/Y H:i:s', strtotime($user->created_at));
+
+            array_push($employees, [
+                'id' => $user->id,
+                'email' => $user->email,
+                'name' => $user->name,
+                'surname' => $user->surname,
+                'creation_data' => $creation_date
+            ]);
+        }
+
+        return $employees;
+    }
 }

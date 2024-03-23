@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,4 +27,10 @@ Route::prefix('recovery')->group(function () {
     Route::post('/password', [LoginController::class, 'sendEmailAndGenerateToken']);
     Route::get('/check-token', [LoginController::class, 'checkToken']);
     Route::post('/new-password', [LoginController::class, 'newPassword']);
+});
+
+Route::prefix('/manager')->group(function () {
+    Route::get('/employee', [EmployeeController::class, 'getEmployee']);
+    Route::patch('/employee/update/{id}', [EmployeeController::class, 'updateEmployee']);
+    Route::delete('/employee/delete/{id}', [EmployeeController::class, 'deleteEmployee']);
 });
