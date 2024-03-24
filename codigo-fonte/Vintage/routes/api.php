@@ -30,8 +30,8 @@ Route::prefix('recovery')->group(function () {
     Route::post('/new-password', [LoginController::class, 'newPassword']);
 });
 
-Route::prefix('/manager')->group(function () {
-    Route::get('/employee', [EmployeeController::class, 'getEmployee'])->middleware('auth:sanctum');
+Route::prefix('/manager')->middleware('auth:sanctum')->group(function () {
+    Route::get('/employee', [EmployeeController::class, 'getEmployee']);
     Route::patch('/employee/update/{id}', [EmployeeController::class, 'updateEmployee']);
     Route::delete('/employee/delete/{id}', [EmployeeController::class, 'deleteEmployee']);
 });

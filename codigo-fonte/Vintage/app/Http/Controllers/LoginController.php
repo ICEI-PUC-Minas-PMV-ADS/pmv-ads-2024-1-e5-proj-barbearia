@@ -48,6 +48,13 @@ class LoginController extends Controller
         ]);
     }
 
+    public function logout (Request $request)
+    {
+        $request->user()->tokens()->delete();
+
+        return response()->json(['message' => 'Logout realizado com sucesso']);
+    }
+
     public function sendEmailAndGenerateToken(Request $request)
     {
         $randomNumber = str_pad(mt_rand(1, 999999), 6, '0', STR_PAD_LEFT);
@@ -89,12 +96,5 @@ class LoginController extends Controller
         } else {
             return response()->json(['message' => 'Usuário não encontrado'], 404);
         }
-    }
-
-    public function logout (Request $request)
-    {
-        $request->user()->tokens()->delete();
-
-        return response()->json(['message' => 'Logout realizado com sucesso']);
     }
 }
