@@ -76,7 +76,8 @@ class LoginController extends Controller
         return $return->data;
     }
 
-    public function newPassword (NewPassword $request) {
+    public function newPassword (NewPassword $request)
+    {
         $newPassword = bcrypt($request->password);
         $user = User::where('email', $request->email)->first();
 
@@ -88,5 +89,12 @@ class LoginController extends Controller
         } else {
             return response()->json(['message' => 'Usuário não encontrado'], 404);
         }
+    }
+
+    public function logout (Request $request)
+    {
+        $request->user()->tokens()->delete();
+
+        return response()->json(['message' => 'Logout realizado com sucesso']);
     }
 }
