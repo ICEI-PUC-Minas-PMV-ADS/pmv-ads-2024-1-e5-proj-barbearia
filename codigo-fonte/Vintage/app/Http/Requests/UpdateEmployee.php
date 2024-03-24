@@ -26,7 +26,7 @@ class UpdateEmployee extends FormRequest
         return [
             'name' => 'required|string|min:4|max:30',
             'surname' => 'required|string|min:3|max:30',
-            'email' => 'required|string|email|unique:users'
+            'email' => 'required|string|email'
         ];
     }
 

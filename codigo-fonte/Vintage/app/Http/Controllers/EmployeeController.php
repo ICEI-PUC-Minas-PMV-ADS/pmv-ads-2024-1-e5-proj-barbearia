@@ -19,13 +19,17 @@ class EmployeeController extends Controller
     public function updateEmployee (UpdateEmployee $request, $id) {
         $user = User::find($id);
 
-        $user->update([
-            'name' => $request->name,
-            'surname' => $request->surname,
-            'email' => $request->email
-        ]);
+        if ($user) {
+            $user->update([
+                'name' => $request->name,
+                'surname' => $request->surname,
+                'email' => $request->email
+            ]);
 
-        return response()->json(['Dados cadastrais alterados com sucesso'], 200);
+            return response()->json(['Dados cadastrais alterados com sucesso'], 200);
+        }
+
+        return response()->json(['Nenhum usuario encontrado'], 500);
     }
 
     public function deleteEmployee (Request $request) {
