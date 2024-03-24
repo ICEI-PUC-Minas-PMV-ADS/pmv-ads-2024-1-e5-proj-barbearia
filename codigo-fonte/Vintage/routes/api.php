@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Http\Request;
@@ -35,3 +36,5 @@ Route::prefix('/manager')->middleware('auth:sanctum')->group(function () {
     Route::patch('/employee/update/{id}', [EmployeeController::class, 'updateEmployee']);
     Route::delete('/employee/delete/{id}', [EmployeeController::class, 'deleteEmployee']);
 });
+
+Route::post('/contact-us', [ContactController::class, 'contact']);
