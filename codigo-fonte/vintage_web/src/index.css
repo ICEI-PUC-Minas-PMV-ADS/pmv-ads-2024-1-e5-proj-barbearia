@@ -1,0 +1,118 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    outline: none;
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.bodyLogin{
+  width: 100%;
+  height: 100vh;
+  background-color: #3D3028; 
+  background-image: linear-gradient(to bottom, #E6E6E6, #E6E6E6); 
+  background-size: 100% 80%; 
+  background-repeat: no-repeat; 
+  background-position: bottom; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Box-login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 75vh;
+  background-color: #FFFFFF;
+  border-radius: 3vh;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.box-login-logo{
+  width: 100%;
+  text-align: center;
+  
+}
+
+.logo-login{
+  width: 240px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Input-login-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+}
+
+.Input-login{
+  margin-bottom: 5px;
+  width: 80%;
+  height: 6vh;
+  border: none;
+  border-bottom: 1px solid #C8C8C8;
+  outline: none;
+  font-size: 13px;
+}
+
+.Botao-Login{
+  width: 180px;
+  height: 40px;
+  border: none;
+  background-color: #3D3028;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+}
