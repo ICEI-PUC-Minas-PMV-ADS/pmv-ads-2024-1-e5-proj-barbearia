@@ -6,11 +6,9 @@ import Login from './pages/login'
 function App() {
   return (
     <div>
-      <Cabecalho />
-      <main>
-        <div> <p>conteudo </p></div>
-      </main>
-      <Rodape />
+      
+     <Login/>
+      
     </div>
   );
 }
