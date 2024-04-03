@@ -10,6 +10,7 @@ function App() {
       
      <Cabecalho/>
      <Sobre/>
+     <br></br>
      <Rodape/>
     </div>
   );
