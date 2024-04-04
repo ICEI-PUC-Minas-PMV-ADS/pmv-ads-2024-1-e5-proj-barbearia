@@ -8,10 +8,8 @@ function App() {
   return (
     <div>
       
-     <Cabecalho/>
-     <Sobre/>
-     <br></br>
-     <Rodape/>
+     <Login/>
+     
     </div>
   );
 }

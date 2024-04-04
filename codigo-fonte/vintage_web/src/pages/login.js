@@ -1,35 +1,53 @@
-import React from 'react';
+import React, { useContext,useState, useEffect } from 'react';
+import { login } from '../services/auth.services' 
+import UserContext from '../UserContext';
 
 const Login = () => {
-  return (
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState(''); 
+  const { signed, setSigned, setId, setName, setSurname, acess_token, setAccessToken } = useContext(UserContext);
 
-    <div className='bodyLogin'>
+  const handleLogin = async () => {
+    try {
+      const response = await login({ email: email, password: password }); 
+      if (response.acess_token) { 
         
-        <div className='Box-login'>
+        setAccessToken(response.acess_token);
+        setSigned(true);
+        setMessage('Login bem-sucedido');
 
-            <div className='box-login-logo'>
-            <img className='logo-login' src="/imagens/logo.png" alt="logomarca vintage barbearia"/>
-            </div>
+        console.log('Login bem-sucedido:', response);
+      } else {
+        
+        setMessage(response.message);
+        console.log('Login falhou', response.message);
+      }
+    } catch (error) {
+      
+      setMessage('Erro ao fazer login. Tente novamente mais tarde.');
+      console.error('Erro ao fazer login:', error);
+    }
+  };
 
-            <p style={{fontWeight:'bold', color:'#343F4B'}}> Insira suas credenciais de acesso</p>
-
-            <div className='Input-login-area'>
-                <input className='Input-login' type="text" id="meuInput" name="nome" placeholder='E-mail'></input>
-                <input className='Input-login' type="password" id="meuInput" name="password" placeholder='Senha'></input>
-
-                <a href=''>
-                    <p style={{color:'#C4A674', border: 'none', fontSize:'13px', fontWeight:'bold', marginTop:'20px', marginBottom:'20px' }}>Esqueci Minha Senha</p>
-                </a>
-
-                <button className='Botao-Login'>Entrar</button>
-            </div>
-
-
-
+  return (
+    <div className='bodyLogin'>
+      <div className='Box-login'>
+        <div className='box-login-logo'>
+          <img className='logo-login' src="/imagens/logo.png" alt="logomarca vintage barbearia"/>
         </div>
-
+        <p style={{fontWeight:'bold', color:'#343F4B'}}> Insira suas credenciais de acesso</p>
+        <div className='Input-login-area'>
+          <input className='Input-login' type="text" value={email} onChange={(e) => setEmail(e.target.value)} name="email" placeholder='E-mail'></input>
+          <input className='Input-login' type="password" value={password} onChange={(e) => setPassword(e.target.value)} name="password" placeholder='Senha'></input>
+          <a href='#'>
+            <p style={{color:'#C4A674', border: 'none', fontSize:'13px', fontWeight:'bold', marginTop:'20px', marginBottom:'20px' }}>Esqueci Minha Senha</p>
+          </a>
+          <button className='Botao-Login' onClick={handleLogin}>Entrar</button> 
+          <p>{message} </p> 
+        </div>
+      </div>
     </div>
-    
   );
 };
 
