@@ -23,7 +23,8 @@ class EmployeeController extends Controller
             $user->update([
                 'name' => $request->name,
                 'surname' => $request->surname,
-                'email' => $request->email
+                'email' => $request->email,
+                'day_off' => $request->day_off,
             ]);
 
             return response()->json(['Dados cadastrais alterados com sucesso'], 200);

@@ -22,6 +22,7 @@ class User extends Authenticatable
         'surname',
         'email',
         'password',
+        'day_off',
     ];
 
     /**
@@ -55,7 +56,8 @@ class User extends Authenticatable
                 'email' => $user->email,
                 'name' => $user->name,
                 'surname' => $user->surname,
-                'creation_data' => $creation_date
+                'creation_data' => $creation_date,
+                'day_off' => $user->day_off
             ]);
         }
 
