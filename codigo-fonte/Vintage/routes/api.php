@@ -34,7 +34,7 @@ Route::prefix('recovery')->group(function () {
 Route::prefix('/manager')->middleware('auth:sanctum')->group(function () {
     Route::get('/employee', [EmployeeController::class, 'getEmployee']);
     Route::patch('/employee/update/{id}', [EmployeeController::class, 'updateEmployee']);
-    Route::delete('/employee/delete/{id}', [EmployeeController::class, 'deleteEmployee']);
+    Route::patch('/employee/disable/{id}', [EmployeeController::class, 'disableEmployee']);
 });
 
 Route::post('/contact-us', [ContactController::class, 'contact']);

@@ -33,12 +33,13 @@ class EmployeeController extends Controller
         return response()->json(['Nenhum usuario encontrado'], 500);
     }
 
-    public function deleteEmployee (Request $request) {
+    public function disableEmployee (Request $request) {
         $user = User::find($request->id);
 
         if($user) {
-            $user->delete();
-            return response()->json(['Usuario excluido com sucesso'], 200);
+            $user->status = false;
+            $user->save();
+            return response()->json(['Usuario inativado com sucesso'], 200);
         }
 
         return response()->json(['Nenhum usuario encontrado'], 500);

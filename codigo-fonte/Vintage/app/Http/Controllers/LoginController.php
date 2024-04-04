@@ -32,8 +32,9 @@ class LoginController extends Controller
     public function login(LoginRequest $request)
     {
         $credentials = $request->only('email', 'password');
+        $userActive = User::where('email', $credentials['email'])->first();
 
-        if (Auth::attempt($credentials)){
+        if (Auth::attempt($credentials) && $userActive->status == 1){
             $user = $request->user();
             $token = $user->createToken('auth_token')->plainTextToken;
             
