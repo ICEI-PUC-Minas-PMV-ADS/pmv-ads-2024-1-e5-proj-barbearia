@@ -11,7 +11,7 @@ class ContactController extends Controller
 {
     public function contact (ContactRequest $request)
     {
-        Mail::to($request->email)->send(new ContactUs($request));
+        Mail::to(env('MAIL_FROM_ADDRESS'))->send(new ContactUs($request));
 
         return response()->json(['status' => 'Sucesso!'], 200);
     }
