@@ -14,14 +14,14 @@ const Cabecalho = () => {
           <img className='homepageIcone' src="/imagens/sobre-icon.png" alt="sobre"/>
           <p className='textoMenu'>Quem somos</p>
         </a>
-        <a href='/' className='HomepageMenu'>
+        <a href='#' className='HomepageMenu'>
           <img className='homepageLogo' src="/imagens/logo.png" alt="logomarca vintage barbearia"/>
         </a>
         <a href='/contato'className='HomepageMenu'>
           <img className='homepageIcone' src="/imagens/contato-icon.png" alt="contato"/>
           <p className='textoMenu'>Contato</p>
         </a>
-        <a href='#' className='HomepageMenu'>
+        <a href='/' className='HomepageMenu'>
           <img className='homepageIcone' src="/imagens/cadeado-icon.png" alt="área restrita"/>
           <p  className='textoMenu'>Área Restrita</p>
         </a>
