@@ -7,23 +7,38 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 
 ## 1. Plano de testes dos Requisitos de Autenticação e Gerenciamento de Usuários:
 
-|  **Caso de Teste**  |  **CT-01  - Tentativa de login com credenciais válidas de funcionário.**  |
+|  **Caso de Teste**  |  **CT-01  - Tentativa de login com credenciais válidas**  |
 |--|--|
 |Requisitos Associados:  |RF-001: Permitir que os funcionários efetuem login na aplicação  | 
-|Critérios de Êxito:  | O funcionário é redirecionado para a página principal após o login bem-sucedido.|
-   
+|Critérios de Êxito:  | Retornar status code 200(sucesso) e um Bearer Token |
 
-|  **Caso de Teste**  |  **CT-02  - Tentativa de login com credenciais válidas de administrador.**  |
+
+
+|  **Caso de Teste**  |  **CT-02  - Tentativa de login com credenciais inválidas**  |
 |--|--|
-|Requisitos Associados:  |RF-002: Permitir que os administradores cadastrem funcionários e efetuem login na aplicação| 
-|Critérios de Êxito:  | Evidência de Sucesso: O administrador é redirecionado para a página principal após o login bem-sucedido.|
+|Requisitos Associados:  |RF-001: Permitir que os funcionários efetuem login na aplicação  | 
+|Critérios de Êxito:  | Retornar status code 401(Erro) |
 
 
 
-|  **Caso de Teste**  |  **CT-03  -  Processo de redefinição de senha por um funcionário ou administrador.**  |
+|  **Caso de Teste**  |  **CT-03 - Acessar pagina que necessita de autenticação com token válido**  |
+|--|--|
+|Requisitos Associados:  |RF-001: Permitir que os funcionários efetuem login na aplicação  | 
+|Critérios de Êxito:  | Retornar status code 200(Sucesso) |
+
+
+
+|  **Caso de Teste**  |  **CT-04 - Acessar pagina que necessita de autenticação com token inválido**  |
+|--|--|
+|Requisitos Associados:  |RF-001: Permitir que os funcionários efetuem login na aplicação  | 
+|Critérios de Êxito:  | Retornar status code 401(Erro) |
+
+
+
+|  **Caso de Teste**  |  **CT-05  -  Processo de redefinição de senha**  |
 |--|--|
 |Requisitos Associados:  |RF-003: Permitir que funcionários e administradores redefinam a senha.| 
-|Critérios de Êxito:  | Evidência de Sucesso: O usuário recebe um e-mail com um link para redefinir a senha e o processo é concluído com sucesso.|
+|Critérios de Êxito:  | Evidência de Sucesso: Retornar a mensagem de Sucesso e status code 200.|
 
 
 ## 2. Plano de testes dos Requisitos de Agendamento e Gerenciamento de Serviços:
