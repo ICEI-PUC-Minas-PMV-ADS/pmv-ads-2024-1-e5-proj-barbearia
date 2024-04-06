@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Client\Request;
 
 class PasswordReset extends Model
 {
@@ -40,10 +41,10 @@ class PasswordReset extends Model
             if ($validateToken && $validateToken->token == $data['token']) {
                 return response()->json(['data' => 'Sucesso']);
             } else {
-                return response()->json(['data' => 'O conjunto e-mail e token não foi encontrado.']);
+                return response()->json(['data' => 'error']);
             }
         }
 
-        return response()->json(['data' => 'Usuário não cadastrado']);
+        return response()->json(['data' => 'error']);
     }
 }

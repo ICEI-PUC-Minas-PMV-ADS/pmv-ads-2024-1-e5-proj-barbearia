@@ -86,16 +86,17 @@ class LoginController extends Controller
 
     public function newPassword (NewPassword $request)
     {
-        $newPassword = bcrypt($request->password);
+        $validatePassword = $request->password === $request->password_confirmation;
         $user = User::where('email', $request->email)->first();
 
-        if ($user) {
+        if ($user && $validatePassword) {
+            $newPassword = bcrypt($request->password);
             $user->password = $newPassword;
             $user->save();
 
-            return response()->json(['message' => 'Senha atualizada com sucesso'], 200);
+            return response()->json(['message' => 'sucesso'], 200);
         } else {
-            return response()->json(['message' => 'Usuário não encontrado'], 404);
+            return response()->json(['message' => 'Usuário não encontrado']);
         }
     }
 }

@@ -78,3 +78,13 @@ body{
   font-size: 50px;
   margin-top: 1.5%;
 }
+
+.bi-arrow-left-short {
+  width: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  color: white;
+}
