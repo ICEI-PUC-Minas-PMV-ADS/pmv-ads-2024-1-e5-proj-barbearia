@@ -124,3 +124,124 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 # Evidências de Testes de Software
 
 Apresente imagens e/ou vídeos que comprovam que um determinado teste foi executado, e o resultado esperado foi obtido. Normalmente são screenshots de telas, ou vídeos do software em funcionamento.
+
+## Testes do projeto da Barbearia Vintage ##
+
+Este documento descreve os testes realizados para garantir o funcionamento adequado do sistema da barbearia Vintage.
+
+###  CT-01 - Tentativa de login com credenciais válida ###
+
+Este teste verifica se a aplicação retorna uma resposta bem-sucedida ao fazer login e fornecer credenciais válidas.
+ 
+Este teste envia uma solicitação de login para a API com um e-mail e senha válidos. Em seguida, verifica se a resposta possui um código de status HTTP 200 (OK) e se a estrutura JSON da resposta contém os campos esperados: 'acess_token' e 'token_type'.
+
+Aqui estão duas capturas de tela demonstrando o funcionamento do teste de login com credenciais válidas.
+
+![Login com Credenciais Válidas - Sucesso](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/login.png?raw=true)
+
+A imagem acima mostra a resposta bem-sucedida da aplicação após o teste de login com credenciais válidas. O código de status HTTP 200 indica que a solicitação foi processada com sucesso e o token de acesso foi gerado corretamente.
+
+![Estrutura JSON da Resposta](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/login02.png?raw=true)
+
+Nesta captura de tela, podemos ver a estrutura JSON da resposta do teste. Os campos 'acess_token' e 'token_type' estão presentes, confirmando que a resposta está de acordo com o esperado pelo teste.
+
+Estas capturas de tela validam o funcionamento correto do teste de login com credenciais válidas.
+
+
+###  - CT-02 - Tentativa de login com credenciais inválidas ###
+
+Este teste verifica se a aplicação retorna uma resposta bem-sucedida ao fazer login e fornecer credenciais válidas.
+
+
+Este teste envia uma solicitação de login para a API com um e-mail e senha inválidos. Em seguida, verifica se a resposta possui um código de status HTTP 401 e se a estrutura JSON da resposta contém os campos esperados: 'acess_token' e 'token_type'.
+
+
+
+  ![image](https://github.com/lucasdamasceno96/1234puc/assets/105467049/d0e73fbd-93b7-4d59-a0e9-b139e5abaa97)
+
+  ![image2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/login-inv.png?raw=true)
+
+
+A imagem acima mostra a resposta bem-sucedida da aplicação após o teste de login com credenciais inválidas. O código de status HTTP 401 indica que a solicitação foi recusada e acesso negado.
+
+### CT-03 - Acessar pagina que necessita de autenticação com token válido ###
+
+
+  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/token-valido.png?raw=true)
+
+
+### CT-04 - Acessar pagina que necessita de autenticação com token inválido ###
+
+  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/token-inva.png?raw=true)
+
+  ![image2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/token-inva02.png?raw=true)
+
+### CT-05 - Processo de redefinição de senha ###
+
+Este é um teste de recuperação de senha dividido em três etapas. O objetivo é simular o processo de recuperação de senha em um sistema.
+ 
+##### 1. Recuperação de Senha - Envio de Email com Código de 6 Dígitos
+
+Nesta etapa, o sistema deve permitir que o usuário solicite a recuperação de senha fornecendo seu endereço de e-mail. O sistema então envia um e-mail contendo um código de 6 dígitos para o endereço fornecido.
+
+![img](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/req-senha.png?raw=true)
+![img](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/req-senha02.png?raw=true)
+
+##### 2. Validação do Código de 6 Dígitos com Sucesso
+
+Após receber o e-mail com o código de recuperação, o usuário deve inserir esse código no sistema. O sistema então valida se o código inserido está correto e se corresponde ao código enviado por e-mail.
+
+![img](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/req-suc.png?raw=true)
+
+##### 3. Informando a Nova Senha com Sucesso
+
+Uma vez validado o código de recuperação, o usuário deve poder definir uma nova senha para sua conta. O sistema permite que o usuário insira a nova senha e a confirme.
+
+![img](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/senha-suc.png?raw=true)
+
+![img](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/senha-suc02.png?raw=true)
+
+
+#### Possíveis Erros
+
+Durante o teste, duas etapas de verificação de erro são consideradas:
+
+1. **Código Errado:** Se o usuário inserir um código incorreto na etapa de validação, o sistema deve retornar uma mensagem de erro indicando que o código inserido está incorreto.
+
+  ![img](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/cod-invalido.png?raw=true)
+
+  ![img](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/cod-invalido02.png?raw=true)
+
+4. **Confirmação de Senha Errada:** Se o usuário inserir uma senha de confirmação diferente da nova senha na etapa de informar a nova senha, o sistema deve retornar uma mensagem de erro indicando que a confirmação da senha está incorreta.
+
+ ![img](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/s-errada02.png?raw=true)
+
+ ![img](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/s-errada1.png?raw=true)
+
+Este teste de recuperação de senha ajuda a garantir que o sistema seja capaz de lidar com o processo de recuperação de senha de forma eficiente e segura, proporcionando uma experiência satisfatória ao usuário.
+
+
+###  Efetuar Logout com Sucesso
+
+Nesta etapa do teste, o usuário já está autenticado no sistema e deseja sair da sessão. O teste consiste em:
+
+- Clicar no botão ou link de "Logout" disponível no sistema.
+- Verificar se o sistema redireciona o usuário para a página de login ou para a página inicial da aplicação.
+
+
+![img](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/log-out00.png?raw=true)
+
+![img](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/logout.png?raw=true)
+
+###  Entrar em contato com a barbearia
+
+Nesta etapa verificamos se o usuario consegue entrar em contato com a barbearia.
+
+![img](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/contato01.png?raw=true)
+
+![img](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/contato02.png?raw=true)
+
+
+
+
+
