@@ -27,7 +27,7 @@ Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth:san
 
 Route::prefix('recovery')->group(function () {
     Route::post('/password', [LoginController::class, 'sendEmailAndGenerateToken']);
-    Route::get('/check-token', [LoginController::class, 'checkToken']);
+    Route::post('/check-token', [LoginController::class, 'checkToken']);
     Route::post('/new-password', [LoginController::class, 'newPassword']);
 });
 

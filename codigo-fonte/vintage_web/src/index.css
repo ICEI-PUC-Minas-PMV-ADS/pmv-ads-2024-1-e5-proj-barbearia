@@ -332,3 +332,11 @@ color: #3D3028;
   margin-right: 20px;
   margin-top: 20px;
 }
+
+#seta-para-voltar {
+  left: 0;
+}
+
+.Botao-Login{
+  cursor: pointer;
+}

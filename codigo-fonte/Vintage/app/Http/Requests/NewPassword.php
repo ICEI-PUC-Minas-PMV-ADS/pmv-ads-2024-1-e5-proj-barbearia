@@ -25,7 +25,8 @@ class NewPassword extends FormRequest
     {
         return [
             'email' => 'required|string|email',
-            'password' => 'required|string|min:8|confirmed',
+            'password' => 'required|string|min:8',
+            'password_confirmation' => 'required|string|min:8'
         ];
     }
 
@@ -36,7 +37,8 @@ class NewPassword extends FormRequest
             'email.email' => 'O email fornecido não é válido.',
             'password.required' => 'O campo senha é obrigatório.',
             'password.min' => 'A senha deve ter no mínimo :min caracteres.',
-            'password.confirmed' => 'As senhas informadas nao sao iguais.',
+            'confirmPassword.required' => 'A confirmação da senha é obrigatória.',
+            'confirmPassword.min' => 'A confirmação da senha deve ter no mínimo :min caracteres.',
         ];
     }
 }
