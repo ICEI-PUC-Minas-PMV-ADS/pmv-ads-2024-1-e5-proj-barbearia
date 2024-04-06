@@ -39,7 +39,7 @@ const RecuperarSenha = () => {
     try {
       const response = await axios.post(`${apiUrl}/recovery/check-token`, { email, token });
       console.log(response.data);
-      if(response.data == 'Sucesso') {
+      if(response.data.status == 'Sucesso') {
         Swal.fire({
           position: 'center',
           icon: 'success',
@@ -61,7 +61,7 @@ const RecuperarSenha = () => {
     } catch (error) {
       Swal.fire({
         title: 'Erro',
-        text: error,
+        text: 'Não possui conta para este e-mail ou o token não é válido',
         icon: 'error',
         confirmButtonText: 'Fechar'
       });
@@ -86,7 +86,7 @@ const RecuperarSenha = () => {
     else {
       Swal.fire({
         title: 'Erro',
-        text: 'Ocorreu um erro',
+        text: response.data.message,
         icon: 'error',
         confirmButtonText: 'Fechar'
       });

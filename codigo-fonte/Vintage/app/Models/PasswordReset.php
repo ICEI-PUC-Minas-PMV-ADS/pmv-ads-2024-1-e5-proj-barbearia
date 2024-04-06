@@ -41,10 +41,10 @@ class PasswordReset extends Model
             if ($validateToken && $validateToken->token == $data['token']) {
                 return response()->json(['data' => 'Sucesso']);
             } else {
-                return response()->json(['data' => 'error']);
+                return response()->json(['data' => 'error'], 401);
             }
         }
 
-        return response()->json(['data' => 'error']);
+        return response()->json(['data' => 'error'], 401);
     }
 }

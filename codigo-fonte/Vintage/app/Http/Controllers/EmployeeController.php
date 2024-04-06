@@ -12,8 +12,7 @@ class EmployeeController extends Controller
         $users = new User();
         
         $employees = $users->getEmployees();
-        return $employees;
-        
+        return response()->json($employees, 200);
     }
 
     public function updateEmployee (UpdateEmployee $request, $id) {
