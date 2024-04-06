@@ -41,19 +41,19 @@ class LoginController extends Controller
             return response()->json([
                 'acess_token' => $token,
                 'token_type' => 'Bearer'
-            ]);
+            ], 200);
         }
 
         return response()->json([
             "message" => "Usuario invalido"
-        ]);
+        ], 401);
     }
 
     public function logout (Request $request)
     {
         $request->user()->tokens()->delete();
 
-        return response()->json(['message' => 'Logout realizado com sucesso']);
+        return response()->json(['message' => 'Logout realizado com sucesso'], 200);
     }
 
     public function sendEmailAndGenerateToken(Request $request)
@@ -81,7 +81,12 @@ class LoginController extends Controller
         $recovery = new PasswordReset();
         $checkToken = $recovery->checkToken($data);
         $return = $checkToken->getData();
-        return $return->data;
+
+        if($return->data == 'Sucesso') {
+            return response()->json(['status' => $return->data], 200);
+        }
+
+        return response()->json(['status' => $return->data], 401);
     }
 
     public function newPassword (NewPassword $request)
@@ -96,7 +101,7 @@ class LoginController extends Controller
 
             return response()->json(['message' => 'sucesso'], 200);
         } else {
-            return response()->json(['message' => 'Usuário não encontrado']);
+            return response()->json(['message' => 'Confirmação da senha não confere ou usuario não encontrado'], 200);
         }
     }
 }
