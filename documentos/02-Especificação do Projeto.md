@@ -38,7 +38,7 @@ Diagrama de componentes da solução.
 
 ## Project Model Canvas
 
-![Project Model Canva](img/projectModelCanva.png)
+![Project Model Canva](img/pmCanva.jpg)
 ## Personas
 
 
