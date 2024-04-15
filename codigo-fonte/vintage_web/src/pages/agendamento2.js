@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import apiUrl from '../services/ApiConfig';
 
 const Agendamento2 = () => {
+    const [funcionarios, setFuncionarios] = useState([]);
+  
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get(`${apiUrl}/schedule/employees`);
+          setFuncionarios(response.data);
+          console.log(response);
+        } catch (error) {
+          console.error('Erro ao buscar os dados:', error);
+        }
+      };
+  
+      fetchData();
+    }, []);
 
   return (
     <div className='body-agendamento'>
@@ -23,26 +40,14 @@ const Agendamento2 = () => {
       </div>
     <div className='conteudo-agendamento-div'>
       <div className='conteudo-agendamento'>
-          <div className='div-profissional'>
-          <div className='conteudo-profissional'>
-            <i class="bi bi-person"></i>
-            <p>Vitor Hugo</p>
-          </div>
-          </div>
-
-          <div className='div-profissional'>
-          <div className='conteudo-profissional'>
-            <i class="bi bi-person"></i>
-            <p>Profissional 2</p>
-          </div>
-          </div>
-
-          <div className='div-profissional'>
-          <div className='conteudo-profissional'>
-            <i class="bi bi-person"></i>
-            <p>Profissional 3</p>
-          </div>
-          </div>
+          {funcionarios.map((funcionario, index) => (
+            <div className='div-profissional'>
+              <div className='conteudo-profissional'>
+                <i class="bi bi-person"></i>
+                <button id="selecionar-barbeiro">{funcionario.name}</button>
+              </div>
+            </div>
+          ))}
           
           </div>
       </div>

@@ -12,14 +12,12 @@ const Login = () => {
     try {
       const response = await login({ email: email, password: password }); 
       if (response.acess_token) { 
-        
         setAccessToken(response.acess_token);
         setSigned(true);
-        setMessage('Login bem-sucedido');
-
-        console.log('Login bem-sucedido:', response);
+        const bearerToken = response.acess_token;
+        localStorage.setItem("bearerToken", bearerToken);
+        setMessage('Login realizado com sucesso!');
       } else {
-        
         setMessage(response.message);
         console.log('Login falhou', response.message);
       }

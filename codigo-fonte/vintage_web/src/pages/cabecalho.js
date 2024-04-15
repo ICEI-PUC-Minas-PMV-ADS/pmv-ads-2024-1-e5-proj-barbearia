@@ -5,7 +5,7 @@ const Cabecalho = () => {
     <header className='homepageCabecalho'>
       
       <div className="HomepageMenuArea">
-        <a href='#' className='HomepageMenu'>
+        <a href='/agendamento' className='HomepageMenu'>
           <img className='homepageIcone1' src="/imagens/agenda-icon.png" alt="agendamentos"/>
           <p className='textoMenu'>Agendamentos</p>
         </a>
