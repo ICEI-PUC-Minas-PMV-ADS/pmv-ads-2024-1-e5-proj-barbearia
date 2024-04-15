@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,11 @@ Route::prefix('/manager')->middleware('auth:sanctum')->group(function () {
     Route::get('/employee', [EmployeeController::class, 'getEmployee']);
     Route::patch('/employee/update/{id}', [EmployeeController::class, 'updateEmployee']);
     Route::patch('/employee/disable/{id}', [EmployeeController::class, 'disableEmployee']);
+});
+
+Route::prefix('/schedule')->group(function () {
+    Route::get('/service', [ServiceController::class, 'getServices']);
+    Route::get('/employees', [ServiceController::class, 'getEmployees']);
 });
 
 Route::post('/contact-us', [ContactController::class, 'contact']);

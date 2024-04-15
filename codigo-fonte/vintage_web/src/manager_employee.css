@@ -1,0 +1,44 @@
+.card {
+    background-color: rgb(221, 221, 221);
+    display: flex;
+    width: 60vw;
+    height: 81vh;
+    margin: 0 auto;
+    margin-top: 1.2%;
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.title_page {
+    font-size: 35px;
+    color: #C4A674;
+    margin-top: 3%;
+}
+
+#showEmployee {
+    background-color: white;
+    height: 8%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    margin-top: 4%;
+    position: relative;
+}
+
+#content_page {
+    padding-left: 3%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 25px;
+}
+
+#icon {
+    margin-left: 90%;
+    font-size: 40px;
+    padding-top: 10px;
+    color: black;
+}
