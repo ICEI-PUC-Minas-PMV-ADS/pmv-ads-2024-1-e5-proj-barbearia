@@ -13,7 +13,6 @@ const Agendamento = () => {
       try {
         const response = await axios.get(`${apiUrl}/schedule/service`);
         setServicos(response.data);
-        console.log(response);
       } catch (error) {
         console.error('Erro ao buscar os dados:', error);
       }
@@ -36,7 +35,7 @@ const Agendamento = () => {
           <h1>Selecionar Serviço</h1>
         </div>
         <div className='cabecalho-logo'>
-          <img className='logo-agendamento' src="/imagens/logo.png" alt="logomarca vintage barbearia" />
+        <a href="/sobre"><img className='logo-agendamento' src="/imagens/logo.png" alt="logomarca vintage barbearia" /></a>
         </div>
       </div>
       <div className='conteudo-agendamento-div'>
@@ -50,20 +49,23 @@ const Agendamento = () => {
 
           <div className='servicos-agendamento'> 
             <ul>
-              {servicos.map((servico, index) => (
-                <li key={index} className='servico-div'>
-                  <button onClick={() => handleButtonClick(servico, index)} className={`servico-button ${botaoClicado === index ? 'changeColor' : ''}`}>
-                    <p className='servico-titulo-agn'>{servico.name}</p>
-                    <p>45min - R${servico.price}</p>
-                  </button>
-                </li>
-              ))}
+            {servicos.length === 0 ? (
+              <div id="loading">Carregando...</div>
+            ) : (
+            servicos.map((servico, index) => (
+              <li key={index} className='servico-div'>
+                <button onClick={() => handleButtonClick(servico, index)} className={`servico-button ${botaoClicado === index ? 'changeColor' : ''}`}>
+                  <p className='servico-titulo-agn'>{servico.name}</p>
+                  <p>45min - R${servico.price}</p>
+                </button>
+              </li>
+            ))
+          )}
             </ul>
           </div>
-          {/* Condição para exibir o botão de prosseguir */}
           {servicoSelecionado && (
             <div className="botao-prosseguir">
-              <Link to="/agendamento2">
+              <Link to={`/agendamento2/${servicoSelecionado.name}`}>
                 <button id="next-page">Proximo</button>
               </Link>
             </div>

@@ -20,9 +20,9 @@ function App() {
           <Route path="/contato" element={<Contato />} />
           <Route path="/recuperar_senha" element={<RecuperarSenha />} />
           <Route path="/agendamento" element={<Agendamento />} />
-          <Route path="/agendamento2" element={<Agendamento2 />} />
-          <Route path="/agendamento3" element={<Agendamento3 />} />
-          <Route path="/agendamento4" element={<Agendamento4 />} />
+          <Route path="/agendamento2/:serviceName" element={<Agendamento2 />} />
+          <Route path="/agendamento3/:serviceName/:employeeId" element={<Agendamento3 />} />
+          <Route path="/agendamento4/:serviceName/:employeeId/:hour" element={<Agendamento4 />} />
           <Route path="/backoffice/manager-employee" element={<Manager_employee />} />
         </Routes>
       </div>
