@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: center;
     overflow-y: scroll;
+    padding-bottom: 3%;
 }
 
 .title_page {
