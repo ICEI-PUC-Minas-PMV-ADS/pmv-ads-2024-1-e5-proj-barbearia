@@ -1,6 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import axios from 'axios';
+import apiUrl from '../services/ApiConfig';
+import Swal from 'sweetalert2';
 
 const Agendamento4 = () => {
+  const { serviceName } = useParams();
+  const { employeeId } = useParams();
+  const { hour } = useParams();
+  const [formValues, setFormValues] = useState({
+    nome: '',
+    email: '',
+    telefone: ''
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormValues({
+      ...formValues,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const data = {
+      'serviceName': serviceName,
+      'employeeId': employeeId,
+      'hour': hour,
+      'name': formValues.nome,
+      'email': formValues.email,
+      'telephone': formValues.telefone,
+    }
+    
+    try {
+      const response = await axios.post(`${apiUrl}/schedule/finalize-scheduling`, data);
+      Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: "Sucesso!",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    } catch (error) {
+      Swal.fire({
+        title: 'Erro',
+        text: error.response.data.message,
+        icon: 'error',
+        confirmButtonText: 'Fechar'
+      });
+    }
+  };
 
   return (
     <div className='body-agendamento'>
@@ -9,7 +59,7 @@ const Agendamento4 = () => {
       </div>
       <div className='cab-agendamento'>
         <div className='cabecalho-agendamento'>
-          <a href="/agendamento3">
+          <a href={`/agendamento3/${serviceName}/${employeeId}`}>
             <i className="bi bi-arrow-left-short" style={{ fontSize: '2rem' }}></i>
           </a>
           <h2>Passo 4 de 4</h2>
@@ -17,7 +67,7 @@ const Agendamento4 = () => {
 
         </div>
         <div className='cabecalho-logo'>
-          <img className='logo-agendamento' src="/imagens/logo.png" alt="logomarca vintage barbearia" />
+          <a href="/sobre"><img className='logo-agendamento' src="/imagens/logo.png" alt="logomarca vintage barbearia" /></a>
 
         </div>
       </div>
@@ -27,14 +77,15 @@ const Agendamento4 = () => {
             <p className='input-data'>Informe seus dados</p>
           </div>
             <div className='input-concluir-area'>
-                <input type='Name' placeholder='Nome'></input>
-                <input type='phone' placeholder='Telefone'></input>
-                <input type='email' placeholder='E-mail'></input>
-            </div>
-
-            <div className='agn-btn-area'>
-              <button className='btn-cancelar'>Cancelar</button>
-              <button className='btn-confirmar'>Confirmar</button>
+              <form id="informar-dados" onSubmit={handleSubmit}>
+                <input type='Name' placeholder='Nome' name='nome' value={formValues.nome} onChange={handleInputChange}></input>
+                <input type='phone' placeholder='Telefone' name='telefone' value={formValues.telefone} onChange={handleInputChange}></input>
+                <input type='email' placeholder='E-mail' name='email' value={formValues.email} onChange={handleInputChange}></input>
+                <div>
+                  <button className='btn-confirmar' type="submit">Confirmar</button>
+                  <button className='btn-cancelar'>Cancelar</button>
+                </div>
+              </form>
             </div>
 
         </div>
