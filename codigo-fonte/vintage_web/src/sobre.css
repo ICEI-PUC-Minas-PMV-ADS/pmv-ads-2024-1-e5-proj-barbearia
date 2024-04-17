@@ -58,7 +58,8 @@ body{
   background-color: white;
   width: 50%;
   margin: 0 auto;
-  height: 65vh;
+  height: 82vh;
+  margin-bottom: 30px;
   border-radius: 40px;
   margin-top: 2.5%;
 }
@@ -67,10 +68,6 @@ body{
   margin-left: 70px;
   padding: 50px 30px 30px 30px;
   font-size: 35px;
-}
-
-.rodapeTotal {
- margin-top: 13%;
 }
 
 #contact-us {

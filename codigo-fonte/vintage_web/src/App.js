@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/login';
+import Homepage from './pages/homepage';
 import Sobre from './pages/sobre';
 import Contato from './pages/contato';
 import RecuperarSenha from './pages/recuperar_senha';
@@ -10,6 +11,7 @@ import Agendamento3 from './pages/agendamento3';
 import Agendamento4 from './pages/agendamento4';
 import Manager_employee from './pages/manager_employee';
 
+
 function App() {
   return (
     <Router>
@@ -17,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/sobre" element={<Sobre />} />
+          <Route path="/homepage" element={<Homepage />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/recuperar_senha" element={<RecuperarSenha />} />
           <Route path="/agendamento" element={<Agendamento />} />

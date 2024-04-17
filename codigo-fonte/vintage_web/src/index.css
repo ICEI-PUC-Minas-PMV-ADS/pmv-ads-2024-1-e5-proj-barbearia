@@ -194,6 +194,37 @@ table {
   width: 500px;
 }
 
+/*HomePage*/
+
+.hpConteudo{
+  width: 100%;
+}
+
+.hpArea1{
+  width: 32%;
+}
+
+.hpArea1a{
+  width: 50%;
+}
+
+.hpArea1b{
+  width: 50%;
+}
+
+.hpAreaExtra{
+  width: 4%;
+}
+
+.hpArea2{
+  width: 32%;
+}
+
+.hpArea3{
+  width: 32%;
+}
+
+
 /*Sobre*/
 
 .sobreConteudo{
