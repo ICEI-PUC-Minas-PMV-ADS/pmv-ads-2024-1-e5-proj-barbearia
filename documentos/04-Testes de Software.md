@@ -249,7 +249,7 @@ Nesta etapa verificamos que o usuário selecionou o horário de 17:00h e foi rem
 
 ### Foi exibido horários inválidos (hora anterior a atual)
 
-O usuário acessou o site para marcar um horário na data do dia 18/04/2024 às 20:11h, porém está exibindo os horários anteriores, como, por exemplo: 9h da manhã.
+O usuário acessou o site para marcar um horário na data do dia 18/04/2024 às 20:11h, porém está exibindo os horários anteriores, como por exemplo, às 9h da manhã.
 
 Veja o exemplo abaixo:
 
