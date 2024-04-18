@@ -9,7 +9,7 @@ const Homepage = () => {
             <div className="hpConteudo">
                 <div className="hpArea1">
                     <div className="hpArea1a">
-                        <h1>Confira nossos serviços <br></br> e agende um horário!</h1>
+                        <h1 className='hpTexto'>Confira nossos serviços <br></br> e agende um horário!</h1>
                     </div>
                     <div className="hpArea1b">
 
@@ -18,7 +18,7 @@ const Homepage = () => {
                 </div>
 
                 <div className="hpAreaExtra">
-                    <p>VOCÊ ENCONTRA AQUI</p>
+                    <p className='hpTexto2'>VOCÊ ENCONTRA AQUI</p>
                 </div>
 
                 <div className="hpArea2">
