@@ -40,7 +40,8 @@ class LoginController extends Controller
             
             return response()->json([
                 'acess_token' => $token,
-                'token_type' => 'Bearer'
+                'token_type' => 'Bearer',
+                'data' => $userActive
             ], 200);
         }
 
