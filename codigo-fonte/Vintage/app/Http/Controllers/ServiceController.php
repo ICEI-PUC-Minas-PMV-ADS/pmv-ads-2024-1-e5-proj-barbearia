@@ -25,11 +25,18 @@ class ServiceController extends Controller
         return response()->json($employees);
     }
 
-    public function getWorkLoad()
+    public function getWorkLoad(Request $request)
     {
-        $workLoad = Workload::all();
+        $scheduledTimes = Scheduled::join('workloads', 'scheduleds.scheduled_time', '=', 'workloads.id')
+                            ->where('scheduleds.users_id', $request->id)
+                            ->pluck('workloads.hour')
+                            ->toArray();
+        
+        $workloadTimes = Workload::pluck('hour')->toArray();
 
-        return response()->json($workLoad);
+        $availableTimes = array_diff($workloadTimes, $scheduledTimes);
+
+        return $availableTimes;
     }
 
     public function finalizeScheduling(SchedulingRequest $request) {
@@ -37,6 +44,7 @@ class ServiceController extends Controller
             'service_name' => $request->serviceName,
             'users_id' => $request->employeeId,
             'scheduled_time' => $request->hour,
+            'scheduled_day' => $request->date,
             'name' => $request->name,
             'email' => $request->email,
             'telefone' => $request->telephone,

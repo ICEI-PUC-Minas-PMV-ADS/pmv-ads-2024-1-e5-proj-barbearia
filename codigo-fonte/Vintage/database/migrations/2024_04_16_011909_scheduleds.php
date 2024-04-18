@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('service_name');
             $table->foreignId('users_id')->constrained()->onDelete('cascade');
             $table->string('scheduled_time');
+            $table->date('scheduled_day');
             $table->string('name');
             $table->string('email');
             $table->string('telefone');

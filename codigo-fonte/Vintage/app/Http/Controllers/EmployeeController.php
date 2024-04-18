@@ -10,8 +10,10 @@ class EmployeeController extends Controller
 {
     public function getEmployee () {
         $users = new User();
-        
+
         $employees = $users->getEmployees();
+
+        dd($employees);
         return response()->json($employees, 200);
     }
 

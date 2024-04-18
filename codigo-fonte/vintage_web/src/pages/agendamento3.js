@@ -13,9 +13,12 @@ const Agendamento3 = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        console.log('Gambá');
-        const response = await axios.get(`${apiUrl}/schedule/workload`);
-        setHorarios(response.data);
+        const data = {
+          "id": employeeId
+        };
+        const response = await axios.post(`${apiUrl}/schedule/workload`, data);
+        const horariosArray = Object.entries(response.data).map(([key, value]) => ({ id: key, hour: value }));
+        setHorarios(horariosArray);
       } catch (error) {
         console.error('Erro ao buscar os dados:', error);
       }
@@ -25,7 +28,6 @@ const Agendamento3 = () => {
   }, []);
 
   const handleButtonClick = (horario, index) => {
-    console.log("Botão clicado:", index);
     setBotaoClicado(index);
     setAgendamentoSelecionado(horario);
   };
@@ -46,7 +48,6 @@ const Agendamento3 = () => {
         </div>
         <div className='cabecalho-logo'>
           <a href="/sobre"><img className='logo-agendamento' src="/imagens/logo.png" alt="logomarca vintage barbearia" /></a>
-
         </div>
       </div>
       <div className='conteudo-agendamento-div'>
@@ -62,9 +63,9 @@ const Agendamento3 = () => {
               ))
             )}
           </div>
-          {agendamentoSelecionado && agendamentoSelecionado.date && agendamentoSelecionado.hour && ( // Verifica se a data e o horário foram selecionados antes de renderizar o botão de próximo
+          {agendamentoSelecionado && agendamentoSelecionado.date && agendamentoSelecionado.hour && (
             <div className="botao-prosseguir">
-              <Link to={`/agendamento4/${serviceName}/${employeeId}/${agendamentoSelecionado.date} ${agendamentoSelecionado.hour}`}>
+              <Link to={`/agendamento4/${serviceName}/${employeeId}/${agendamentoSelecionado.date}/${agendamentoSelecionado.id}`}>
                 <button id="next-page">Próximo</button>
               </Link>
             </div>
