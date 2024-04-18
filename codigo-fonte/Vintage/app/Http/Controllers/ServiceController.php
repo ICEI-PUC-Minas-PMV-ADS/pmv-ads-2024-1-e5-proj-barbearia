@@ -29,6 +29,7 @@ class ServiceController extends Controller
     {
         $scheduledTimes = Scheduled::join('workloads', 'scheduleds.scheduled_time', '=', 'workloads.id')
                             ->where('scheduleds.users_id', $request->id)
+                            ->where('scheduled_day', $request->date)
                             ->pluck('workloads.hour')
                             ->toArray();
         
