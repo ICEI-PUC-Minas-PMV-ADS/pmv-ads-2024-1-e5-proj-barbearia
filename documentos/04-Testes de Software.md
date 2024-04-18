@@ -241,7 +241,11 @@ Nesta etapa verificamos se o usuario consegue entrar em contato com a barbearia.
 
 ![img](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes/contato02.png?raw=true)
 
+### Marcar horário 
 
+Nesta etapa verificamos que o usuário selecionou o horário de 17:00h e foi removido o horário de 16:00h.
+
+![img]![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/103466408/dfbccfc9-77bd-4b42-a968-d7350f2ad1c3)
 
 
 
