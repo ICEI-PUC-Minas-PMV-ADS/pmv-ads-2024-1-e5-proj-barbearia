@@ -250,9 +250,11 @@ Nesta etapa verificamos que o usuário selecionou o horário de 17:00h e foi rem
 ### Foi exibido horários inválidos (hora anterior a atual)
 
 O usuário acessou o site para marcar um horário na data do dia 18/04/2024 às 20:11h, porém está exibindo os horários anteriores, como, por exemplo: 9h da manhã.
+
 Veja o exemplo abaixo:
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/103466408/f6b808b9-d3cc-4b08-b8d0-513b871225ca)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/103466408/2e546a67-6182-4c5a-b813-b55ef06a817c)
+
 
 
 
