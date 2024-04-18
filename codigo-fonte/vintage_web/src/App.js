@@ -25,7 +25,7 @@ function App() {
           <Route path="/agendamento" element={<Agendamento />} />
           <Route path="/agendamento2/:serviceName" element={<Agendamento2 />} />
           <Route path="/agendamento3/:serviceName/:employeeId" element={<Agendamento3 />} />
-          <Route path="/agendamento4/:serviceName/:employeeId/:hour" element={<Agendamento4 />} />
+          <Route path="/agendamento4/:serviceName/:employeeId/:date/:hour" element={<Agendamento4 />} />
           <Route path="/backoffice/manager-employee" element={<Manager_employee />} />
         </Routes>
       </div>

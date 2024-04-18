@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 const Agendamento4 = () => {
   const { serviceName } = useParams();
   const { employeeId } = useParams();
+  const { date } = useParams();
   const { hour } = useParams();
   const [formValues, setFormValues] = useState({
     nome: '',
@@ -27,6 +28,7 @@ const Agendamento4 = () => {
     const data = {
       'serviceName': serviceName,
       'employeeId': employeeId,
+      'date' : date,
       'hour': hour,
       'name': formValues.nome,
       'email': formValues.email,
@@ -51,6 +53,9 @@ const Agendamento4 = () => {
       });
     }
   };
+
+  console.log(date);
+  console.log(hour);
 
   return (
     <div className='body-agendamento'>

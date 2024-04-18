@@ -41,7 +41,7 @@ Route::prefix('/manager')->middleware('auth:sanctum')->group(function () {
 Route::prefix('/schedule')->group(function () {
     Route::get('/service', [ServiceController::class, 'getServices']);
     Route::get('/employees', [ServiceController::class, 'getEmployees']);
-    Route::get('/workload', [ServiceController::class, 'getWorkLoad']);
+    Route::post('/workload', [ServiceController::class, 'getWorkLoad']);
     Route::post('/finalize-scheduling', [ServiceController::class, 'finalizeScheduling']);
 });
 

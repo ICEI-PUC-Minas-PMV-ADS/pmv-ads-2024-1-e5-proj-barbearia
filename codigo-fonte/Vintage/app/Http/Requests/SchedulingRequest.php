@@ -27,6 +27,7 @@ class SchedulingRequest extends FormRequest
             'serviceName' => 'required|string',
             'employeeId' => 'required|integer',
             'hour' => 'required|string',
+            'date' => 'required|date',
             'name' => 'required|string',
             'email' => 'required|email',
             'telephone' => 'required|min:8|max:11',

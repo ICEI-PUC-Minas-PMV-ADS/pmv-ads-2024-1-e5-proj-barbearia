@@ -15,6 +15,7 @@ class Scheduled extends Model
         'service_name',
         'users_id',
         'scheduled_time',
+        'scheduled_day',
         'name',
         'email',
         'telefone',
