@@ -10,26 +10,29 @@ const Agendamento3 = () => {
   const [botaoClicado, setBotaoClicado] = useState(null);
   const [agendamentoSelecionado, setAgendamentoSelecionado] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = {
-          "id": employeeId
-        };
-        const response = await axios.post(`${apiUrl}/schedule/workload`, data);
-        const horariosArray = Object.entries(response.data).map(([key, value]) => ({ id: key, hour: value }));
-        setHorarios(horariosArray);
-      } catch (error) {
-        console.error('Erro ao buscar os dados:', error);
-      }
-    };
+  const fetchData = async (date) => {
+    try {
+      const data = {
+        id: employeeId,
+        date: date
+      };
+      const response = await axios.post(`${apiUrl}/schedule/workload`, data);
+      const horariosArray = Object.entries(response.data).map(([key, value]) => ({ id: key, hour: value }));
+      setHorarios(horariosArray);
+    } catch (error) {
+      console.error('Erro ao buscar os dados:', error);
+    }
+  };
 
-    fetchData();
-  }, []);
+  const handleDateChange = (e) => {
+    const selectedDate = e.target.value;
+    setAgendamentoSelecionado({ date: selectedDate });
+    fetchData(selectedDate);
+  };
 
   const handleButtonClick = (horario, index) => {
     setBotaoClicado(index);
-    setAgendamentoSelecionado(horario);
+    setAgendamentoSelecionado({ ...horario, date: agendamentoSelecionado?.date });
   };
 
   return (
@@ -44,7 +47,6 @@ const Agendamento3 = () => {
           </a>
           <h2>Passo 3 de 4</h2>
           <h1>Selecionar Horário</h1>
-
         </div>
         <div className='cabecalho-logo'>
           <a href="/sobre"><img className='logo-agendamento' src="/imagens/logo.png" alt="logomarca vintage barbearia" /></a>
@@ -52,17 +54,19 @@ const Agendamento3 = () => {
       </div>
       <div className='conteudo-agendamento-div'>
         <div className='conteudo-agendamento'>
-          <input className='input-data' type='date' value={agendamentoSelecionado?.date} onChange={(e) => setAgendamentoSelecionado({ ...agendamentoSelecionado, date: e.target.value })}></input>
+          <input className='input-data' type='date' value={agendamentoSelecionado?.date} onChange={handleDateChange}></input>
 
-          <div className='div-horarios'>
-            {horarios.length === 0 ? (
-              <div id="loading">Carregando...</div>
-            ) : (
-              horarios.map((horario, index) => (
-                <button onClick={() => handleButtonClick(horario, index)} key={index} className='agendamentos-horarios' style={{ backgroundColor: botaoClicado === index ? 'grey' : '' }}>{horario.hour}</button>
-              ))
-            )}
-          </div>
+          {agendamentoSelecionado && agendamentoSelecionado.date && (
+            <div className='div-horarios'>
+              {horarios.length === 0 ? (
+                <div id="loading">Carregando...</div>
+              ) : (
+                horarios.map((horario, index) => (
+                  <button onClick={() => handleButtonClick(horario, index)} key={index} className='agendamentos-horarios' style={{ backgroundColor: botaoClicado === index ? 'grey' : '' }}>{horario.hour}</button>
+                ))
+              )}
+            </div>
+          )}
           {agendamentoSelecionado && agendamentoSelecionado.date && agendamentoSelecionado.hour && (
             <div className="botao-prosseguir">
               <Link to={`/agendamento4/${serviceName}/${employeeId}/${agendamentoSelecionado.date}/${agendamentoSelecionado.id}`}>
