@@ -9,6 +9,10 @@ const Agendamento3 = () => {
   const [horarios, setHorarios] = useState([]);
   const [botaoClicado, setBotaoClicado] = useState(null);
   const [agendamentoSelecionado, setAgendamentoSelecionado] = useState(null);
+  const today = new Date().toISOString().split('T')[0];
+  const sixDaysFromNow = new Date(Date.now() + 6 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+  const currentDate = new Date();
+  const currentHour = currentDate.getHours();
 
   const fetchData = async (date) => {
     try {
@@ -54,22 +58,54 @@ const Agendamento3 = () => {
       </div>
       <div className='conteudo-agendamento-div'>
         <div className='conteudo-agendamento'>
-          <input className='input-data' type='date' value={agendamentoSelecionado?.date} onChange={handleDateChange}></input>
+          <input className='input-data' type='date' value={agendamentoSelecionado?.date} onChange={handleDateChange} min={today} max={sixDaysFromNow} />
 
           {agendamentoSelecionado && agendamentoSelecionado.date && (
             <div className='div-horarios'>
               {horarios.length === 0 ? (
                 <div id="loading">Carregando...</div>
               ) : (
-                horarios.map((horario, index) => (
-                  <button onClick={() => handleButtonClick(horario, index)} key={index} className='agendamentos-horarios' style={{ backgroundColor: botaoClicado === index ? 'grey' : '' }}>{horario.hour}</button>
-                ))
+                horarios.map((horario, index) => {
+                  const selectedDate = new Date(agendamentoSelecionado.date + 'T00:00:00');
+                  const currentDateWithoutTime = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate());
+                  const selectedDateWithoutTime = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), selectedDate.getDate());
+
+                  const isToday = selectedDateWithoutTime.getTime() === currentDateWithoutTime.getTime();
+                  
+                  const [hours, minutes] = horario && horario.hour ? horario.hour.split(":").map(Number) : [0, 0];
+
+                  if (isToday && hours > currentHour) {
+                    return (
+                      <button 
+                        onClick={() => handleButtonClick(horario, index)} 
+                        key={index} 
+                        className='agendamentos-horarios' 
+                        style={{ backgroundColor: botaoClicado === index ? 'grey' : '' }}
+                      >
+                        {horario.hour}
+                      </button>
+                    );
+                  } else if (!isToday) {
+                    return (
+                      <button 
+                        onClick={() => handleButtonClick(horario, index)} 
+                        key={index} 
+                        className='agendamentos-horarios' 
+                        style={{ backgroundColor: botaoClicado === index ? 'grey' : '' }}
+                      >
+                        {horario.hour}
+                      </button>
+                    );
+                  } else {
+                    return null;
+                  }
+                })
               )}
             </div>
           )}
           {agendamentoSelecionado && agendamentoSelecionado.date && agendamentoSelecionado.hour && (
             <div className="botao-prosseguir">
-              <Link to={`/agendamento4/${serviceName}/${employeeId}/${agendamentoSelecionado.date}/${agendamentoSelecionado.id}`}>
+              <Link to={`/agendamento4/${serviceName}/${employeeId}/${agendamentoSelecionado.date}/${parseInt(agendamentoSelecionado.id) + 1}`}>
                 <button id="next-page">Próximo</button>
               </Link>
             </div>
