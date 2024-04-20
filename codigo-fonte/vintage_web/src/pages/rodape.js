@@ -6,12 +6,15 @@ const Rodape = () => {
 
       <div className="rodapeConteudo">
         <img className='rodapeLogo' src="/imagens/logo.png" alt="logomarca vintage barbearia" />
+        <a href="/homepage"></a>
       </div>
 
       <div className="rodapeTexto1">
 
-        <p> Agendamentos <br></br> Quem somos <br></br> Contato <br></br> Serviços <br></br> </p>
-
+        <p> <a href="/agendamento" className="agendBotao">Agendamentos</a> </p>
+        <p> <a href="/sobre" className="sobreBotao">Quem somos</a> </p>
+        <p> <a href="/contato" className="contatoBotao">Contato</a> </p>
+        <p> <a href="/" className="servicosBotao">Serviços</a> </p>
       </div>
 
       <div className="rodapeTexto2">

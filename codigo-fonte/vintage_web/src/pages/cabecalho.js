@@ -10,11 +10,11 @@ const Cabecalho = () => {
           <p className='textoMenu'>Agendamentos</p>
         </a>
 
-        <a href='/sobre'className='HomepageMenu'>
+        <a href='/sobre' className='HomepageMenu'>
           <img className='homepageIcone' src="/imagens/sobre-icon.png" alt="sobre"/>
           <p className='textoMenu'>Quem somos</p>
         </a>
-        <a href='#' className='HomepageMenu'>
+        <a href='/homepage' className='HomepageMenu'>
           <img className='homepageLogo' src="/imagens/logo.png" alt="logomarca vintage barbearia"/>
         </a>
         <a href='/contato'className='HomepageMenu'>
