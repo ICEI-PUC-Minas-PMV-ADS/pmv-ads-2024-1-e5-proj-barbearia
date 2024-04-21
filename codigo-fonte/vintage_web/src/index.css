@@ -567,7 +567,7 @@ display: flex;
   color: #3D3028;
   font-weight: bold;
   background-color: #FFFFFF;
-  height: 30px;
+  height: 3.5vh;
   border-radius: 10px;
   border: none;
   padding-left: 25px;
@@ -579,7 +579,7 @@ display: flex;
   color: #FFFFFF;
   font-weight: bold;
   background-color: #3D3028;
-  height: 30px;
+  height: 3.5vh;
   border-radius: 10px;
   border: none;
   padding-left: 25px;
@@ -627,15 +627,35 @@ display: flex;
   border-bottom: 1px solid #C8C8C8;
   height: 7rem;
   cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 3vh 5vh 3vh 5vh;
   
 }
 
-.conteudo-profissional p{
+.conteudo-profissional button{
   font-weight: bold;
   color: #47525E;
   margin-left: 20px;
   font-size: 1.3rem;
 }
+
+.conteudo-profissional button:hover{
+  font-weight: bold;
+  color: #422408;
+  margin-left: 20px;
+  font-size: 1.3rem;
+}
+
+.conteudo-profissional button:focus{
+  font-weight: bold;
+  color: #422408;
+  margin-left: 20px;
+  font-size: 1.3rem;
+}
+
+
 
 .conteudo-profissional i{
   color: #47525E;
@@ -646,13 +666,13 @@ display: flex;
 }
 
 .input-data{
-  margin-top: 20px;
-  padding: 5px;
-  font-weight: bold;
-  font-size: 20px;
-  color: #47525E;
-  border: none;
-  outline: none;
+    margin-top: 20px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #47525E;
+    border-radius: 20px;
+    outline: none;
 }
 
 .input-data::-moz-focus-inner{
@@ -667,15 +687,15 @@ display: flex;
 
 .agendamentos-horarios{
   display: flex;
-  width: 15%;
   box-sizing: border-box;
   justify-content: center;
-  padding: 20px;
+  padding: 15px 20px 15px 20px;
   margin: 10px;
-  margin-top: 5%;
+  margin-top: 5vh;
   cursor: pointer;
   border: none;
   font-size: 20px;
+  border-radius: 20px;
 
 }
 
@@ -762,29 +782,28 @@ justify-content: flex-end;
 
 #next-page {
   margin-top: 50%;
-  color: black;
-  font-size: 20px;
-  width: 120px;
-  height: 50px;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: bold;
+  width: 20vh;
+  height: 7vh;
   border-radius: 10px;
-  background-color: #C4A674;
+  background-color: #3D3028;
   border: none;
   cursor: pointer;
 }
 
-#selecionar-barbeiro {
+.selecionar-barbeiro {
   width: 100%;
-  height: 100%;
   border: none;
-  background-color: white;
+  background-color: transparent;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 3.5vh;
   text-align: left;
+  margin-left: 2vh;
 }
 
-#selecionar-barbeiro:hover, .div-profissional:hover {
-  background-color: rgb(236, 234, 234);
-}
+
 
 #loading {
   font-size: 40px;
