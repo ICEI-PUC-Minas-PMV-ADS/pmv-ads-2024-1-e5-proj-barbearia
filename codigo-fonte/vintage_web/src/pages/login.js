@@ -1,19 +1,25 @@
-import React, { useContext,useState, useEffect } from 'react';
-import { login } from '../services/auth.services' 
-import UserContext from '../UserContext';
+import React, { useState } from 'react';
+import { login } from '../services/auth.services';
+import { useUser } from '../UserContext';
+import { Navigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [message, setMessage] = useState(''); 
-  const { signed, setSigned, setId, setName, setSurname, acess_token, setAccessToken } = useContext(UserContext);
+  const [message, setMessage] = useState('');
+  const { signed, id, name, surname, setSigned, setId, setName, setSurname, setEmail: setUserEmail, setAccessToken, accessToken } = useUser();
 
   const handleLogin = async () => {
     try {
-      const response = await login({ email: email, password: password }); 
-      if (response.acess_token) { 
-        setAccessToken(response.acess_token);
+      const response = await login({ email: email, password: password });
+      console.log(response);
+      if (response.acess_token) {
         setSigned(true);
+        setId(response.data.id);
+        setName(response.data.name);
+        setSurname(response.data.surname);
+        setUserEmail(response.data.email);
+        setAccessToken(response.acess_token);
         const bearerToken = response.acess_token;
         localStorage.setItem("bearerToken", bearerToken);
         setMessage('Login realizado com sucesso!');
@@ -22,12 +28,18 @@ const Login = () => {
         console.log('Login falhou', response.message);
       }
     } catch (error) {
-      
       setMessage('Erro ao fazer login. Tente novamente mais tarde.');
       console.error('Erro ao fazer login:', error);
     }
   };
 
+  console.log("Contexto de usuário:", { signed, id, name, surname, email, accessToken }); 
+
+  if (signed) {
+    return <Navigate to="/backoffice/manager-employee" />;
+  }
+
+ 
   return (
     <div>
       <div>
@@ -36,7 +48,7 @@ const Login = () => {
       <div className='bodyLogin'>
         <div className='Box-login'>
           <div id="seta-para-voltar">
-            <a href="/contato"><i className="bi bi-arrow-left-short" style={{ fontSize: '8rem' }}></i></a>
+            <a href="/contato"><i className="bi bi-arrow-left-short" style={{ fontSize: '3rem' }}></i></a>
           </div>
           <div className='box-login-logo'>
             <img className='logo-login' src="/imagens/logo.png" alt="logomarca vintage barbearia"/>

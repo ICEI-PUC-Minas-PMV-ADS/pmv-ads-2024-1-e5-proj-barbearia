@@ -5,7 +5,9 @@ import '../manager_employee.css';
 import axios from 'axios';
 import apiUrl from '../services/ApiConfig';
 
+
 const Manager = () => {
+  
   const [data, setData] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
@@ -28,6 +30,7 @@ const Manager = () => {
   }, []);
 
   return (
+    
     <div>
         <div>
             <Cabecalho_backoffice/>
