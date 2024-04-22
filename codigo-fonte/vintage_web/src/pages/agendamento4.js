@@ -72,7 +72,7 @@ const Agendamento4 = () => {
 
         </div>
         <div className='cabecalho-logo'>
-          <a href="/sobre"><img className='logo-agendamento' src="/imagens/logo.png" alt="logomarca vintage barbearia" /></a>
+          <a href="/"><img className='logo-agendamento' src="/imagens/logo.png" alt="logomarca vintage barbearia" /></a>
 
         </div>
       </div>

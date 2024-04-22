@@ -80,7 +80,7 @@ const RecuperarSenha = () => {
         timer: 1500
       });
       setTimeout(() => {
-        window.location.href = '/';
+        window.location.href = '/login';
       }, 1500);
     }
     else {

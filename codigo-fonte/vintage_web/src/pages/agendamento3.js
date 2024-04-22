@@ -53,7 +53,7 @@ const Agendamento3 = () => {
           <h1>Selecionar Horário</h1>
         </div>
         <div className='cabecalho-logo'>
-          <a href="/sobre"><img className='logo-agendamento' src="/imagens/logo.png" alt="logomarca vintage barbearia" /></a>
+          <a href="/"><img className='logo-agendamento' src="/imagens/logo.png" alt="logomarca vintage barbearia" /></a>
         </div>
       </div>
       <div className='conteudo-agendamento-div'>

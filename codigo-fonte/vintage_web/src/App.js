@@ -19,10 +19,10 @@ function App() {
     <UserProvider>
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Homepage/>} />
         <Route path="/sobre" element={<Sobre />} />
-        <Route path="/homepage" element={<Homepage />} />
         <Route path="/contato" element={<Contato />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/recuperar_senha" element={<RecuperarSenha />} />
         <Route path="/agendamento" element={<Agendamento />} />
         <Route path="/agendamento2/:serviceName" element={<Agendamento2 />} />

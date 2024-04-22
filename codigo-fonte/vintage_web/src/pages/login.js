@@ -67,7 +67,7 @@ const Login = () => {
       <div className='bodyLogin'>
         <div className='Box-login'>
           <div id="seta-para-voltar">
-            <a href="/contato"><i className="bi bi-arrow-left-short" style={{ fontSize: '3rem' }}></i></a>
+            <a href="/"><i className="bi bi-arrow-left-short" style={{ fontSize: '3rem' }}></i></a>
           </div>
           <div className='box-login-logo'>
             <img className='logo-login' src="/imagens/logo.png" alt="logomarca vintage barbearia"/>

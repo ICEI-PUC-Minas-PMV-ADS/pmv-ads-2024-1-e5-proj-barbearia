@@ -12,7 +12,6 @@ const Agendamento2 = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        console.log('Gambá');
         console.log(serviceName);
         const response = await axios.get(`${apiUrl}/schedule/employees`);
         setFuncionarios(response.data);
@@ -45,7 +44,7 @@ const Agendamento2 = () => {
           <h1>Selecionar Profissional</h1>
         </div>
         <div className='cabecalho-logo'>
-          <a href="/sobre"><img className='logo-agendamento' src="/imagens/logo.png" alt="logomarca vintage barbearia" /></a>
+          <a href="/"><img className='logo-agendamento' src="/imagens/logo.png" alt="logomarca vintage barbearia" /></a>
         </div>
       </div>
       <div className='conteudo-agendamento-div'>
