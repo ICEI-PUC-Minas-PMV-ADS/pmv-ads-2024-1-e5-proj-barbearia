@@ -13,7 +13,6 @@ class EmployeeController extends Controller
 
         $employees = $users->getEmployees();
 
-        dd($employees);
         return response()->json($employees, 200);
     }
 
