@@ -10,10 +10,11 @@ import Agendamento2 from './pages/agendamento2';
 import Agendamento3 from './pages/agendamento3';
 import Agendamento4 from './pages/agendamento4';
 import Manager_employee from './pages/manager_employee';
-import PrivateRoute from './PrivateRoute'; // Importe o componente PrivateRoute
-import { UserProvider } from './UserContext';
+import PrivateRoute from './PrivateRoute'; 
+import { UserProvider} from './UserContext';
 
 function App() {
+
   return (
     <UserProvider>
     <Router>

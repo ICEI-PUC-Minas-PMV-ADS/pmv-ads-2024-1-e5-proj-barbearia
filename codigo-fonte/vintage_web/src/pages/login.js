@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { login } from '../services/auth.services';
 import { useUser } from '../UserContext';
 import { Navigate } from 'react-router-dom';
@@ -7,7 +7,26 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
-  const { signed, id, name, surname, setSigned, setId, setName, setSurname, setEmail: setUserEmail, setAccessToken, accessToken } = useUser();
+  const { signed, id, name, surname, setSigned, setId, setName, setSurname, setEmail: setUserEmail, setAccessToken} = useUser();
+
+  useEffect(() => {
+    const bearerToken = localStorage.getItem('bearerToken');
+    if (bearerToken) {
+      const id = localStorage.getItem('Id');
+      const name = localStorage.getItem('name');
+      const surname = localStorage.getItem('surname');
+      const email = localStorage.getItem('email');
+
+      setSigned(true);
+      setId(id);
+      setName(name);
+      setSurname(surname);
+      setEmail(email);
+      setAccessToken(bearerToken);
+    }
+  }, [setSigned, setId, setName, setSurname, setEmail, setAccessToken]);
+
+  
 
   const handleLogin = async () => {
     try {
@@ -19,10 +38,12 @@ const Login = () => {
         setName(response.data.name);
         setSurname(response.data.surname);
         setUserEmail(response.data.email);
-        setAccessToken(response.acess_token);
         const bearerToken = response.acess_token;
         localStorage.setItem("bearerToken", bearerToken);
-        setMessage('Login realizado com sucesso!');
+        localStorage.setItem("Id", response.data.id);
+        localStorage.setItem("name", response.data.name);
+        localStorage.setItem("surname", response.data.surname);
+        localStorage.setItem("email", response.data.email);
       } else {
         setMessage(response.message);
         console.log('Login falhou', response.message);
@@ -32,8 +53,6 @@ const Login = () => {
       console.error('Erro ao fazer login:', error);
     }
   };
-
-  console.log("Contexto de usuário:", { signed, id, name, surname, email, accessToken }); 
 
   if (signed) {
     return <Navigate to="/backoffice/manager-employee" />;
