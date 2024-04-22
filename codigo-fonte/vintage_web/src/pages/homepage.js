@@ -23,10 +23,10 @@ const Homepage = () => {
                 </div>
 
                 <div className="hpArea2">
-                    <img src="/imagens/locao.png" alt="Loção pós barba" className="image" />
-                    <img src="/imagens/pomada.png" alt="Pomada modeladora" className="image" />
-                    <img src="/imagens/minoxidil.png" alt="Minoxidil" className="image" />
-                    <img src="/imagens/shampoo.png" alt="Shampoo p/ cabelo e barba" className="image" />
+                    <img src="/imagens/locao.png" alt="Loção pós barba" className="product-image" />
+                    <img src="/imagens/pomada.png" alt="Pomada modeladora" className="product-image" />
+                    <img src="/imagens/minoxidil.png" alt="Minoxidil" className="product-image" />
+                    <img src="/imagens/shampoo.png" alt="Shampoo p/ cabelo e barba" className="product-image" />
                 </div>
 
                 <div className="hpAreaExtra2">
