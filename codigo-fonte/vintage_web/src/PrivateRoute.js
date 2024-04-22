@@ -5,7 +5,7 @@ import { useUser } from './UserContext';
 const PrivateRoute = ({ element, ...rest }) => {
     const { signed } = useUser();
 
-    return signed ? <Outlet {...rest} /> : <Navigate to="/" />;
+    return signed ? <Outlet {...rest} /> : <Navigate to="/login" />;
 };
 
 export default PrivateRoute;

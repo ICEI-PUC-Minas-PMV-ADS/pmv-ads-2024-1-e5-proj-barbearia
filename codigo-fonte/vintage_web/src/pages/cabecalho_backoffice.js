@@ -23,7 +23,7 @@ const Cabecalho_backoffice = () => {
 
         <p id="msg-welcome">Seja bem vindo, {name}</p>
 
-        <a href="/" id="exit" onClick={handleExitClick}><i class="bi bi-box-arrow-right" style={{ fontSize: '2rem' }}></i></a>
+        <a href="/login" id="exit" onClick={handleExitClick}><i class="bi bi-box-arrow-right" style={{ fontSize: '2rem' }}></i></a>
       </div>
     </header>
   );
