@@ -13,7 +13,7 @@ const Homepage = () => {
                         <a href="/agendamento" className="hpBotao">Agende seu horário!</a>
                     </div>
                     <div className="hpArea1b">
-                    <img src="/imagens/corteHp.png" alt="cortes" className="corteHp" />
+                        <img src="/imagens/corteHp.png" alt="cortes" className="corteHp" />
                     </div>
 
                 </div>
@@ -23,17 +23,29 @@ const Homepage = () => {
                 </div>
 
                 <div className="hpArea2">
-                    <img src="/imagens/locao.png" alt="Loção pós barba" className="product-image" />
-                    <img src="/imagens/pomada.png" alt="Pomada modeladora" className="product-image" />
-                    <img src="/imagens/minoxidil.png" alt="Minoxidil" className="product-image" />
-                    <img src="/imagens/shampoo.png" alt="Shampoo p/ cabelo e barba" className="product-image" />
+                    <div className="prod1">
+                        <img src="/imagens/locao.png" alt="Loção pós barba" className="product-image" />
+                        <p className="textoProd"> LOÇÃO PÓS BARBA</p>
+                    </div>
+
+                    <div className="prod1">
+                        <img src="/imagens/pomada.png" alt="Pomada modeladora" className="product-image" />
+                        <p className="textoProd"> POMADA<br></br>MODELADORA</p>
+                    </div>
+
+                    <div className="prod1">
+                        <img src="/imagens/minoxidil.png" alt="Minoxidil" className="product-image" />
+                        <p className="textoProd"> MINOXIDIL</p>
+                    </div>
+
+                    <div className="prod1">
+                        <img src="/imagens/shampoo.png" alt="Shampoo p/ cabelo e barba" className="product-image" />
+                        <p className="textoProd"> SHAMPOO P/<br></br>CABELO E BARBA</p>
+                    </div>
                 </div>
 
                 <div className="hpAreaExtra2">
-                    <h1 className="textoProd"> LOÇÃO PÓS BARBA</h1>
-                    <h1 className="textoProd"> POMADA<br></br>MODELADORA</h1>
-                    <h1 className="textoProd"> MINOXIDIL</h1>
-                    <h1 className="textoProd"> SHAMPOO P/<br></br>CABELO E BARBA</h1>
+
 
                 </div>
 
