@@ -13,7 +13,7 @@ const Homepage = () => {
                         <a href="/agendamento" className="hpBotao">Agende seu horário!</a>
                     </div>
                     <div className="hpArea1b">
-
+                    <img src="/imagens/corteHp.png" alt="cortes" className="corteHp" />
                     </div>
 
                 </div>
