@@ -55,7 +55,7 @@ const Login = () => {
   };
 
   if (signed) {
-    return <Navigate to="/backoffice/manager-employee" />;
+    return <Navigate to="/plataforma"/>;
   }
 
  
