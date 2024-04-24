@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Sidebar from './sidebar';
-import Cabecalho_backoffice from './cabecalho_backoffice';
-import '../manager_employee.css';
 import axios from 'axios';
 import apiUrl from '../services/ApiConfig';
 
@@ -31,25 +28,46 @@ const Manager = () => {
 
   return (
     
-    <div>
-        <div>
-            <Cabecalho_backoffice/>
-        </div>
-        <div>
-            <Sidebar />
-        </div>
-        <div>
-          <div class="card">
-            <h1 class="title_page">Gerenciar funcionarios</h1>
+    
+        
+          <div className="manager-funcionarios-area">
+            <h1 className="manager-titulo">Gerenciar funcionarios</h1>
             {data && data.map(item => (
-            <div id="showEmployee" key={item.id}>
-              <h2 id="content_page">{item.name}</h2>
-              <a href="#" id="icon"><i className="bi bi-book-half"></i></a>
+            <div className="opc-funcionario-manager" key={item.id}>
+              <p>{item.name} {item.surname}</p>
+              <a href="#"><i className="bi bi-pencil-square"></i></a>
             </div>
             ))}
+                <div className='botao-area-employee'>
+                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
+                    Incluir Funcionário
+                  </button>
+                </div>
+
+                  
+                  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Cadastro de Funcionário</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                          <button type="button" class="btn btn-success">Cadastrar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
           </div>
-      </div>
-    </div>
+      
+    
     
   );
 };
