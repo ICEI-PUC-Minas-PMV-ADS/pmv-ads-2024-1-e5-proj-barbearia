@@ -105,4 +105,8 @@ class LoginController extends Controller
             return response()->json(['message' => 'Confirmação da senha não confere ou usuario não encontrado'], 200);
         }
     }
+
+    public function teste() {
+        return response()->json(['status' => 'Chegou aqui!']);
+    }
 }
