@@ -177,7 +177,6 @@ table {
 }
 
 
-
 .homepage-subCabecalho{
   width: 100%;
   display: flex;
@@ -254,7 +253,7 @@ margin-top: 100px;
 .hpAreaExtra{
   width: 100%;
   height: 50px;
-  margin-top: 20px;
+  margin-top: 13%;
 }
 
 .hpTexto2{
@@ -543,16 +542,14 @@ display: flex;
   display: flex;
   align-items: center;
   justify-content: center;
-  
   height: 100%;
   
 }
 
 .logo-agendamento{
-  width: 7%;
-  top: 0px;
-  position: fixed ;
-  
+  width: 150px;
+  height: 150px;
+  top: 0;
 }
 
 .conteudo-agendamento-div{
@@ -665,7 +662,8 @@ display: flex;
 
 .conteudo-profissional i{
   color: #47525E;
-  margin-left: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
   color:'#47525E';
   font-Size: 2.5em; 
 
@@ -745,10 +743,11 @@ display: flex;
   border: none;
   background-color: #F95F62;
   border-radius: 10px;
-  padding: 20px 30px 20px 30px;
+  padding: 18px 30px 18px 30px;
   margin-top: 20px;
   margin-right: 20px;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .btn-confirmar{
@@ -761,6 +760,7 @@ display: flex;
   margin-top: 20px;
   margin-right: 20px;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .agn-btn-area{
@@ -798,7 +798,7 @@ justify-content: flex-end;
   cursor: pointer;
 }
 
-#selecionar-barbeiro {
+.selecionar-barbeiro {
   width: 100%;
   height: 100%;
   border: none;
@@ -806,9 +806,13 @@ justify-content: flex-end;
   cursor: pointer;
   font-size: 30px;
   text-align: left;
+  padding-left: 10px;
 }
 
-#selecionar-barbeiro:hover, .div-profissional:hover {
+.selecionar-barbeiro:hover {
+  .conteudo-profissional:hover {
+    background-color: rgb(236, 234, 234);
+  }
   background-color: rgb(236, 234, 234);
 }
 
