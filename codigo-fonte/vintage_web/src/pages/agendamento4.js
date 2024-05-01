@@ -88,7 +88,7 @@ const Agendamento4 = () => {
                 <input type='email' placeholder='E-mail' name='email' value={formValues.email} onChange={handleInputChange}></input>
                 <div>
                   <button className='btn-confirmar' type="submit">Confirmar</button>
-                  <button className='btn-cancelar'>Cancelar</button>
+                  <Link to="/" className='btn-cancelar'>Cancelar</Link>
                 </div>
               </form>
             </div>
