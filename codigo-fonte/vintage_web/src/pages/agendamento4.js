@@ -79,7 +79,7 @@ const Agendamento4 = () => {
       <div className='conteudo-agendamento-div'>
         <div className='conteudo-agendamento'>
           <div className='concluir-agn-div'>
-            <p className='input-data'>Informe seus dados</p>
+            <p className='titulo-agn'>Informe seus dados</p>
           </div>
             <div className='input-concluir-area'>
               <form id="informar-dados" onSubmit={handleSubmit}>

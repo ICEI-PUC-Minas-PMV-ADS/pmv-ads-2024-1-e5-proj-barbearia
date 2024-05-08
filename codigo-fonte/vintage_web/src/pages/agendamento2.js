@@ -55,8 +55,8 @@ const Agendamento2 = () => {
             funcionarios.map((funcionario, index) => (
               <div className='div-profissional' key={index}>
                 <div className='conteudo-profissional'>
-                  <i className="bi bi-person icone-profissional"></i>
-                  <button className='selecionar-barbeiro' onClick={() => handleButtonClick(funcionario, index)} >{funcionario.name}</button>
+                  
+                  <button className='selecionar-barbeiro' onClick={() => handleButtonClick(funcionario, index)} > <i className="bi bi-person icone-profissional"></i>{funcionario.name}</button>
                 </div>
               </div>
             ))

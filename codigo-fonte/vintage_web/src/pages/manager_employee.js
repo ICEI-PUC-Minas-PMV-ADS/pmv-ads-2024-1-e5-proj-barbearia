@@ -31,6 +31,7 @@ const Manager = () => {
     
         
           <div className="manager-funcionarios-area">
+           
             <h1 className="manager-titulo">Gerenciar funcionarios</h1>
             {data && data.map(item => (
             <div className="opc-funcionario-manager" key={item.id}>
@@ -39,31 +40,41 @@ const Manager = () => {
             </div>
             ))}
                 <div className='botao-area-employee'>
-                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
+                  <label for="incluir-funcionario" class="btn-incluir">
                     Incluir Funcionário
-                  </button>
-                </div>
+                  </label>
+                  <input type="checkbox" id="incluir-funcionario"></input>
 
-                  
-                  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Cadastro de Funcionário</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          ...
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                          <button type="button" class="btn btn-success">Cadastrar</button>
-                        </div>
+                  <div className='modal-incluir-funcionario'>
+                    <div className='modal-area'>
+                      <div className='modal-cab'>
+                      <p>Incluir Funcionário</p> <label for="incluir-funcionario"><i class="bi bi-x btn-fechar"></i></label>
                       </div>
+                        
+                       <div className='modal-main'>
+                        <p>Nome</p>
+                        <input type='name' name='name'></input>
+
+                        <p>Sobrenome</p>
+                        <input type='surname' name='surname'></input>
+
+                        <p>E-mail</p>
+                        <input type='email' name='email'></input>
+
+                        <p>Defina uma senha</p>
+                        <input type='password' name='password'></input>
+                        </div> 
+
+                        <div className='modal-footer'>
+                        <label for="incluir-funcionario"><a className='btn-cancelar-modal'>Cancelar</a></label>
+                        <label for="incluir-funcionario"><a className='btn-confirmar-modal'>Confirmar</a></label>
+                        </div>
+                      
+                      
                     </div>
                   </div>
+
+                </div>
 
           </div>
       
