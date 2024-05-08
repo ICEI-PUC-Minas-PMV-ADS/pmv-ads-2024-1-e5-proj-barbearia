@@ -80,7 +80,7 @@ const Login = () => {
               <p style={{color:'#C4A674', border: 'none', fontSize:'13px', fontWeight:'bold', marginTop:'20px', marginBottom:'20px' }}>Esqueci Minha Senha</p>
             </a>
             <button className='Botao-Login' onClick={handleLogin}>Entrar</button> 
-            <p>{message} </p> 
+            <p className='mensagem-login'>{message} </p> 
           </div>
         </div>
       </div>

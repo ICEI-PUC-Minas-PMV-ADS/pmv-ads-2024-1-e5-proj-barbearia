@@ -58,6 +58,7 @@ const Agendamento3 = () => {
       </div>
       <div className='conteudo-agendamento-div'>
         <div className='conteudo-agendamento'>
+        <p className='titulo-agn'>Escolha uma data:</p>
           <input className='input-data' type='date' value={agendamentoSelecionado?.date} onChange={handleDateChange} min={today} max={sixDaysFromNow} />
 
           {agendamentoSelecionado && agendamentoSelecionado.date && (
@@ -80,7 +81,7 @@ const Agendamento3 = () => {
                         onClick={() => handleButtonClick(horario, index)} 
                         key={index} 
                         className='agendamentos-horarios' 
-                        style={{ backgroundColor: botaoClicado === index ? 'grey' : '' }}
+                        style={{ backgroundColor: botaoClicado === index ? '#d7d7d7' : '' }}
                       >
                         {horario.hour}
                       </button>
@@ -91,7 +92,7 @@ const Agendamento3 = () => {
                         onClick={() => handleButtonClick(horario, index)} 
                         key={index} 
                         className='agendamentos-horarios' 
-                        style={{ backgroundColor: botaoClicado === index ? 'grey' : '' }}
+                        style={{ backgroundColor: botaoClicado === index ? '#d7d7d7' : '' }}
                       >
                         {horario.hour}
                       </button>
