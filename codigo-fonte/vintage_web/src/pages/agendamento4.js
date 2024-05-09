@@ -44,6 +44,9 @@ const Agendamento4 = () => {
         showConfirmButton: false,
         timer: 1500
       });
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 1500);
     } catch (error) {
       Swal.fire({
         title: 'Erro',
