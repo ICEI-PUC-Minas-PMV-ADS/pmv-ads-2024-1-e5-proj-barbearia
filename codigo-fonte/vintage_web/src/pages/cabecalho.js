@@ -12,7 +12,7 @@ const Cabecalho = () => {
       <input type="checkbox" id="menu-mobile"></input>           
         <div className='area-menu-mobile'>
         <label for="menu-mobile">
-        <i class="bi bi-x icon-menu-mobile"></i>
+        <i class="bi bi-x icon-menu-mobile icon-fechar"></i>
       </label>
       <input type="checkbox" id="menu-mobile"></input>
 
