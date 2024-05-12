@@ -80,5 +80,4 @@ class ScheduleServiceTest extends TestCase
  
         $response->assertStatus(200);
     }
- 
 }
