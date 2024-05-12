@@ -277,10 +277,17 @@ Evidência de Sucesso: O cliente consegue visualizar todos os serviços oferecid
 ### Lista de Barbeiros - Disponibiliza os barbeiros disponiveis na barbearia
 RF-004: Permitir que os clientes agendem serviços online
 
-EvidÊncia de Sucesso: O cliente consegue visualizar todos os barbeiros disponiveis na barbearia
+Evidência de Sucesso: O cliente consegue visualizar todos os barbeiros disponiveis na barbearia
 
 ![WhatsApp Image 2024-05-12 at 12 09 25 (2)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/102702197/7eeb1267-f2bc-4392-a98e-a766c65ef449)
 
+### Listando horários Disponíveis - Permitir que o cliente visualize os horários disponíveis 
+
+RF-004: Permitir que os clientes agendem serviços online
+
+Evidência de Sucesso: Cliente consegue visualizar os horários disponíveis e selecionar o horário que melhor lhe atenda.
+
+![WhatsApp Image 2024-05-12 at 12 09 52 (3)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/103466408/c4dcd4e2-f8c5-4c4e-a3bb-3063594cd16d)
 
 
 
