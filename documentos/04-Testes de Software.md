@@ -255,6 +255,19 @@ Veja o exemplo abaixo:
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/103466408/2e546a67-6182-4c5a-b813-b55ef06a817c)
 
+### Teste de Sucesso - Cliente agenda um serviço através da plataforma ###
+
+Requisitos Associados:
+RF-004: Permitir que os clientes agendem serviços online
+
+Critérios de Êxito:
+Evidência de Sucesso: O agendamento é registrado no sistema e refletido no calendário da barbearia.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes-int/agenda.jpeg?raw=true)
+
+
+
+
 
 
 
