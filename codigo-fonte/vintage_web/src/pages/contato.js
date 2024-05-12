@@ -43,8 +43,9 @@ const Contato = () => {
   };
 
   return (
-    <div>
+    <>
       <Cabecalho />
+    <div className='contato-area'>
       <div id="contact-us">
         <h2>Fale Conosco</h2>
       </div>
@@ -104,8 +105,10 @@ const Contato = () => {
           {responseMessage && <p>{responseMessage}</p>}
         </div>
       </div>
+      </div>
+    
       <Rodape />
-    </div>
+      </>
   );
 };
 
