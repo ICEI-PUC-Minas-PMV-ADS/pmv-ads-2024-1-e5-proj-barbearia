@@ -43,5 +43,42 @@ class ScheduleServiceTest extends TestCase
             ]
         ]);
     }
+
+    //Listar os horarios disponiveis
+    public function testWorkloadsList() {
+        $response = $this->post('/api/schedule/workload');
+ 
+        $response->assertStatus(200);
+    }
+ 
+    //Efetuar o agendamento com sucesso
+    public function testFinishSchedule() {
+        $response = $this->post('/api/schedule/workload', [
+            'date' => '2024-05-14',
+            'email' => 'test_integracao@gmail.com',
+            'employeeId' => 11,
+            'hour' => 5,
+            'name' => 'Joaquim',
+            'serviceName' => 'Corte',
+            'telephone' => '996351543'
+        ]);
+ 
+        $response->assertStatus(200);
+    }
+ 
+    //Passando parametro errado
+    public function testFinishScheduleError() {
+        $response = $this->post('/api/schedule/workload', [
+            'date' => '',
+            'email' => 'test_integracao@gmail.com',
+            'employeeId' => 11,
+            'hour' => 5,
+            'name' => 123,
+            'serviceName' => 'Corte',
+            'telephone' => '99635154331231'
+        ]);
+ 
+        $response->assertStatus(200);
+    }
  
 }
