@@ -279,7 +279,8 @@ RF-004: Permitir que os clientes agendem serviços online
 
 EvidÊncia de Sucesso: O cliente consegue visualizar todos os barbeiros disponiveis na barbearia
 
-![WhatsApp Image 2024-05-12 at 12 09 52](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/102702197/4ab3ee04-574f-4e22-8fe5-3c643d2eff77)
+![WhatsApp Image 2024-05-12 at 12 09 25 (2)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/102702197/7eeb1267-f2bc-4392-a98e-a766c65ef449)
+
 
 
 
