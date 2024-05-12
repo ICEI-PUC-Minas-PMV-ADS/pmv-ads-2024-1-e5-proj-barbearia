@@ -1256,5 +1256,57 @@ justify-content: flex-end;
     .rodapeTexto1{
       text-align: center;
     }
+
+    /*contato*/
+
+    #contact-us{
+      margin: 0 !important;
+      text-align: center;
+      margin-top: 5vh !important;
+      margin-bottom: 5vh !important;
+      display: none;
+    }
+
+    #content{
+      margin: 0 !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 90% !important;
+      padding-bottom: 5vh;
+    }
+
+    .contato-area{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      flex-direction: column;
+      padding-bottom: 5vh;
+      padding-top: 5vh;
+
+    }
+
+    .input-group{
+      width: 100% !important;
+      text-align: center;
+    }
+
+    .input-group input{
+      width: 100% !important;
+    }
+
+    .form-container{
+      width: 80% !important;
+    }
+
+    #form{
+      width: 100%;
+    }
+
+    .textarea-field{
+      width: 90% !important;
+    }
   
   }
