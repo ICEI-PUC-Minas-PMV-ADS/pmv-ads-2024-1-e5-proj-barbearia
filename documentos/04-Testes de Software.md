@@ -265,6 +265,23 @@ Evidência de Sucesso: O agendamento é registrado no sistema e refletido no cal
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes-int/agenda.jpeg?raw=true)
 
+### Teste de Passagem de Parâmetro Incorreto no Agendamento ###
+
+Este documento descreve um caso de teste para verificar o comportamento da API quando um parâmetro incorreto é passado durante o agendamento de um serviço.
+
+Descrição:
+Este caso de teste visa garantir que a API retorne um erro apropriado quando um parâmetro incorreto é passado durante o processo de agendamento de um serviço.
+
+Critérios de Êxito:
+A API retorna um código de erro apropriado.
+
+Cenários de Teste:
+Passagem de uma data inválida como parâmetro.
+Passagem de um tipo de serviço inexistente como parâmetro.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/105467049/47c6abdd-9fb5-4725-8633-1a0cf900cd6e)
+
+
 ### Lista de Serviço - Disponibiliza os serviços que são feitos na barbearia
 
 RF-004: Permitir que os clientes agendem serviços online
