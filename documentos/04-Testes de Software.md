@@ -255,6 +255,60 @@ Veja o exemplo abaixo:
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/103466408/2e546a67-6182-4c5a-b813-b55ef06a817c)
 
+### Teste de Sucesso - Cliente agenda um serviço através da plataforma ###
+
+Requisitos Associados:
+RF-004: Permitir que os clientes agendem serviços online
+
+Critérios de Êxito:
+Evidência de Sucesso: O agendamento é registrado no sistema e refletido no calendário da barbearia.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/blob/main/documentos/img/testes-int/agenda.jpeg?raw=true)
+
+### Teste de Passagem de Parâmetro Incorreto no Agendamento ###
+
+Este documento descreve um caso de teste para verificar o comportamento da API quando um parâmetro incorreto é passado durante o agendamento de um serviço.
+
+Descrição:
+Este caso de teste visa garantir que a API retorne um erro apropriado quando um parâmetro incorreto é passado durante o processo de agendamento de um serviço.
+
+Critérios de Êxito:
+A API retorna um código de erro apropriado.
+
+Cenários de Teste:
+Passagem de uma data inválida como parâmetro.
+Passagem de um tipo de serviço inexistente como parâmetro.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/105467049/47c6abdd-9fb5-4725-8633-1a0cf900cd6e)
+
+
+### Lista de Serviço - Disponibiliza os serviços que são feitos na barbearia
+
+RF-004: Permitir que os clientes agendem serviços online
+
+Evidência de Sucesso: O cliente consegue visualizar todos os serviços oferecidos pela barbearia
+
+![WhatsApp Image 2024-05-12 at 12 08 57](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/103466408/bbea5e2e-1dc4-49d7-b090-dde1dd30e4a9)
+
+
+### Lista de Barbeiros - Disponibiliza os barbeiros disponiveis na barbearia
+RF-004: Permitir que os clientes agendem serviços online
+
+Evidência de Sucesso: O cliente consegue visualizar todos os barbeiros disponiveis na barbearia
+
+![WhatsApp Image 2024-05-12 at 12 09 25 (2)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/102702197/7eeb1267-f2bc-4392-a98e-a766c65ef449)
+
+### Listando horários Disponíveis - Permitir que o cliente visualize os horários disponíveis 
+
+RF-004: Permitir que os clientes agendem serviços online
+
+Evidência de Sucesso: Cliente consegue visualizar os horários disponíveis e selecionar o horário que melhor lhe atenda.
+
+![WhatsApp Image 2024-05-12 at 12 09 52 (3)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/103466408/c4dcd4e2-f8c5-4c4e-a3bb-3063594cd16d)
+
+
+
+
 
 
 
