@@ -267,8 +267,9 @@ Evidência de Sucesso: O agendamento é registrado no sistema e refletido no cal
 
 ### Lista de Serviço - Disponibiliza os serviços que são feitos na barbearia
 
-EvidÊncia de Sucesso:
-O cliente consegue visualizar todos os serviços oferecidos pela barbearia
+RF-004: Permitir que os clientes agendem serviços online
+
+Evidência de Sucesso: O cliente consegue visualizar todos os serviços oferecidos pela barbearia
 
 ![WhatsApp Image 2024-05-12 at 12 08 57](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia/assets/103466408/bbea5e2e-1dc4-49d7-b090-dde1dd30e4a9)
 
