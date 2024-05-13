@@ -28,9 +28,15 @@ const Agendamento = () => {
 
   return (
     <div className='body-agendamento'>
+      <div>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+      </div>
 
       <div className='cab-agendamento'>
         <div className='cabecalho-agendamento'>
+        <a href="/">
+            <i className="bi bi-arrow-left-short" style={{ fontSize: '2rem' }}></i>
+          </a>
           <h2>Passo 1 de 4</h2>
           <h1>Selecionar Serviço</h1>
         </div>

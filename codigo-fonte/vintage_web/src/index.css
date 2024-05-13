@@ -1311,6 +1311,36 @@ justify-content: flex-end;
 
     /* Agendamentos responsividade */
 
-      
+    .conteudo-agendamento{
+      width: 90%;
+      height: 90vh;
+      overflow: auto;
+    }
+
+    .filtros-agendamento{
+      width: 90%;
+      padding-left: 1vh;
+      padding-right: 1vh;
+      overflow: auto;
+      box-sizing: border-box;
+    }
+
+    .opc-filtro, .opc-filtro-selecionado{
+      margin-right: 1vh;
+    }
+
+    .logo-agendamento{
+      display: none;
+    }
+
+    /* login e recupera-senha responsividade */
+
+    .Box-login{
+      width: 95%;
+    }
+
+    .Input-login-area{
+      width: 100%;
+    }
   
   }
