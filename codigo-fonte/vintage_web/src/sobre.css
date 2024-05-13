@@ -58,11 +58,11 @@ body{
   background-color: white;
   width: 50%;
   margin: 0 auto;
-  height: 70vh;
   margin-bottom: 30px;
   border-radius: 40px;
   margin-top: 2.5%;
   margin-bottom: 10%;
+  padding-bottom: 3vh;
 }
 
 #form{
