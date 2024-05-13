@@ -101,13 +101,13 @@ const RecuperarSenha = () => {
       <div className='bodyLogin'>
         <div className='Box-login'>
           <div id="seta-para-voltar">
-            <a href="/contato"><i className="bi bi-arrow-left-short" style={{ fontSize: '3rem' }}></i></a>
+            <a href="/login"><i className="bi bi-arrow-left-short" style={{ fontSize: '3rem' }}></i></a>
           </div>
           <div className='box-login-logo'>
             <img className='logo-login' src="/imagens/logo.png" alt="logomarca vintage barbearia"/>
           </div>
           <p style={{fontWeight:'bold', color:'#343F4B'}}>Esqueci minha senha</p>
-          <p style={{ color: '#343F4B', marginTop: '20px', width: '400px', textAlign: 'center' }}>Insira seu e-mail utilizado no cadastro para que possamos enviar um código de recuperação</p>
+          <p style={{ color: '#343F4B', marginTop: '20px', width: '100%;', textAlign: 'center' }}>Insira seu e-mail utilizado no cadastro para que possamos enviar um código de recuperação</p>
           <div className='Input-login-area'>
             <input style={{ marginTop: '5%' }} className='Input-login' type="text" value={email} onChange={(e) => setEmail(e.target.value)} name="email" placeholder='E-mail'></input>
             {showTokenInput && (
