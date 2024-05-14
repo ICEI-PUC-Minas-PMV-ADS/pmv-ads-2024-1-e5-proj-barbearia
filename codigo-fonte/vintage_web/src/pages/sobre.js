@@ -24,7 +24,6 @@ const Sobre = () => {
             </p>
           </div>
           <div className="sobreLd2">
-        
           </div>
         </div>
         <div className="sobreDb2">
