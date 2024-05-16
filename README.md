@@ -8,6 +8,8 @@
 
 Desenvolvimento de uma aplicacao de agendamento online e gerenciamento de uma barbearia.
 
+[link-site](https://vintage-frontend-dd8562046edb.herokuapp.com/)
+
 ## Integrantes
 
 * Gabriela França Alves Miranda
