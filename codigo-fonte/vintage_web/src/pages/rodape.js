@@ -21,10 +21,16 @@ const Rodape = () => {
 
         <p> Acompanhe nossas <br></br> redes Sociais</p>
 
-        <img className='rodapeIcon' src="/imagens/insta-icon.png" alt="instagram" />
-        <img className='rodapeIcon' src="/imagens/ytb-icon.png" alt="youtube" />
-        <img className='rodapeIcon' src="/imagens/face-icon.png" alt="facebook" />
+        <a href="https://www.instagram.com/barbeariavintagebh/" target="_blank">
+          <img className='rodapeIcon' src="/imagens/insta-icon.png" alt="instagram" />
+        </a>
 
+        <a href="" target="_blank">
+          <img className='rodapeIcon' src="/imagens/ytb-icon.png" alt="youtube" />
+        </a>
+        <a href="https://www.facebook.com/BarbeariaVintageBH" target="_blank">
+          <img className='rodapeIcon' src="/imagens/face-icon.png" alt="facebook" />
+        </a>
       </div>
 
       <div className="rodapeTexto3">
