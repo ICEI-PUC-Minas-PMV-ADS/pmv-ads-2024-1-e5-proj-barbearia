@@ -54,6 +54,8 @@ const Manager = () => {
     return (
         <div className="manager-funcionarios-area">
             <h1 className="manager-titulo">Gerenciar funcionarios</h1>
+
+            <div className='manager-employer-area'>
             {data && data.map(item => (
                 <div className="opc-funcionario-manager" key={item.id}>
                     <p className='texto-lista-funcionario'>{item.name} {item.surname}</p>
@@ -97,6 +99,7 @@ const Manager = () => {
                         </div>
                     </div>
                 </div>
+                
             ))}
             <div className='botao-area-employee'>
                 <label htmlFor="incluir-funcionario" className="btn-incluir">
@@ -131,6 +134,7 @@ const Manager = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
