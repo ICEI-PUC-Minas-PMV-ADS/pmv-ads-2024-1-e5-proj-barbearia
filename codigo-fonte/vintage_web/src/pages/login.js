@@ -63,7 +63,7 @@ const Login = () => {
   };
 
   if (signed) {
-    return <Navigate to="/plataforma" />;
+    return <Navigate to="/backoffice" />;
   }
 
   return (

@@ -11,7 +11,7 @@ import Agendamento3 from './pages/agendamento3';
 import Agendamento4 from './pages/agendamento4';
 import PrivateRoute from './PrivateRoute'; 
 import { UserProvider} from './UserContext';
-import Plataforma from './pages/plataforma';
+import Backoffice from './pages/backoffice';
 
 function App() {
 
@@ -28,8 +28,8 @@ function App() {
         <Route path="/agendamento2/:serviceName" element={<Agendamento2 />} />
         <Route path="/agendamento3/:serviceName/:employeeId" element={<Agendamento3 />} />
         <Route path="/agendamento4/:serviceName/:employeeId/:date/:hour" element={<Agendamento4 />} />
-        <Route path="/plataforma" element={<PrivateRoute/>}>
-        <Route path="/plataforma" element={<Plataforma />} />
+        <Route path="/backoffice" element={<PrivateRoute/>}>
+        <Route path="/backoffice" element={<Backoffice />} />
         </Route>
       </Routes>
     </Router>
