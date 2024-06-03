@@ -103,7 +103,7 @@ const Manager = () => {
             ))}
             <div className='botao-area-employee'>
                 <label htmlFor="incluir-funcionario" className="btn-incluir">
-                    Incluir Funcionário
+                        +
                 </label>
                 <input type="checkbox" id="incluir-funcionario"></input>
 

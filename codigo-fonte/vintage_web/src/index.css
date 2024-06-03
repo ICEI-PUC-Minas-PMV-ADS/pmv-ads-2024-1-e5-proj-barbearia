@@ -1077,6 +1077,7 @@ table {
   margin-right: 5vh;
   font-size: 2rem;
   color: #3D3028;
+  cursor: pointer;
 }
 
 .botao-area-employee {
@@ -1367,13 +1368,18 @@ table {
 }
 
 .btn-incluir {
-  padding: 2vh;
+  padding: 1vh 2vh 2vh 2vh;
   border: none;
-  border-radius: 10px;
+  border-radius: 10vh;
   font-weight: 500;
   background-color: #3D3028;
   color: #FFFFFF;
   cursor: pointer;
+  position: fixed;
+  bottom: 7vh;
+  right: 30vh;
+  font-size: 2rem;
+
 }
 
 .hp-menu-mobile {
@@ -1491,6 +1497,57 @@ margin-top: 1vh;
   font-weight: 500;
   font-size: 1.1rem;
 }
+
+/* Estoque */
+
+.estoque-area{
+  width: 100%;
+  background-color: #FFFFFF;
+  height: 100%;
+  border-radius: 5vh;
+  margin-top: 2vh;
+  padding: 3vh;
+
+}
+
+.estoque-filtro{
+  width: 100%;
+  border: solid 1px #969FAA;
+  border-radius: 5vh;
+  display: flex;
+  align-items: center;
+  padding: 2vh;
+}
+
+.filtro-unt{
+  width: 25%;
+  text-align: center;
+}
+
+.filtro-unt p {
+  font-weight: 500;
+  color: #47525E;
+}
+
+.produto-estoque{
+  width: 100%;
+  padding: 1vh;
+  background-color: #E5E5E5;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+
+}
+
+.produto-unt{
+  width: 25%;
+  text-align: center;
+}
+
+.produtos-estoque-area{
+  margin-top: 2vh;
+}
+
 
 
 

@@ -66,8 +66,8 @@ const Backoffice = () => {
       <main className='main-manager'>
         <nav className='navbar-manager'>
           <ul className='menu-manager'>
-            <li onClick={() => setActiveComponent('Manager_employee')}><i className="bi bi-people-fill"></i> Gerenciar funcionarios</li>
             <li onClick={() => setActiveComponent('ManagerSchedule')}><i className="bi bi-journal-bookmark-fill"></i> Agenda</li>
+            <li onClick={() => setActiveComponent('Manager_employee')}><i className="bi bi-people-fill"></i> Gerenciar funcionarios</li>
             <li onClick={() => setActiveComponent('ManagerStock')}><i className="bi bi-archive-fill"></i> Estoque</li>
             <li onClick={() => setActiveComponent('ManagerReport')}><i className="bi bi-file-bar-graph-fill"></i> Relatórios</li>
             <li onClick={() => setActiveComponent('ManagerHistory')}><i className="bi bi-clock-history"></i> Histórico de agendamentos</li>
