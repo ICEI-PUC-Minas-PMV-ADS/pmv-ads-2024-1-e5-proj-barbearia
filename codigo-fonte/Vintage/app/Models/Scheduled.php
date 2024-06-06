@@ -19,5 +19,6 @@ class Scheduled extends Model
         'name',
         'email',
         'telefone',
+        'status'
     ];
 }

@@ -44,6 +44,8 @@ Route::prefix('/schedule')->group(function () {
     Route::get('/employees', [ServiceController::class, 'getEmployees']);
     Route::post('/workload', [ServiceController::class, 'getWorkLoad']);
     Route::post('/finalize-scheduling', [ServiceController::class, 'finalizeScheduling']);
+    Route::get('/get-schedule/{barberId?}/{date?}', [ServiceController::class, 'getSchedules']);
+    Route::post('cancel-appointment/{id}', [ServiceController::class, 'cancelAppointment']);
 });
 
 Route::post('/contact-us', [ContactController::class, 'contact']);

@@ -40,7 +40,8 @@ class ServiceController extends Controller
         return $availableTimes;
     }
 
-    public function finalizeScheduling(SchedulingRequest $request) {
+    public function finalizeScheduling(SchedulingRequest $request)
+    {
         $scheduled = Scheduled::create([
             'service_name' => $request->serviceName,
             'users_id' => $request->employeeId,
@@ -57,4 +58,60 @@ class ServiceController extends Controller
 
         return response()->json(['status' => 'Erro ao realizar o agendamento'], 400);
     }
+
+    public function getSchedules($barberId = null, $date = null)
+{
+    if($date && $barberId === 'none') {
+        $schedules = Scheduled::join('workloads', 'scheduleds.scheduled_time', '=', 'workloads.id')
+            ->select('scheduleds.id', 'scheduleds.name', 'scheduleds.email', 'scheduleds.telefone', 'scheduleds.scheduled_time', 'scheduleds.status', 'workloads.hour')
+            ->where('scheduled_day', $date)
+            ->get();
+
+        return response()->json($schedules);
+    }
+
+    if($barberId && is_null($date)) {
+        $schedules = Scheduled::join('workloads', 'scheduleds.scheduled_time', '=', 'workloads.id')
+            ->select('scheduleds.id', 'scheduleds.name', 'scheduleds.email', 'scheduleds.telefone', 'scheduleds.scheduled_time', 'scheduleds.status', 'workloads.hour')
+            ->where('users_id', $barberId)
+            ->get();
+
+        return response()->json($schedules);
+    }
+
+    if($barberId && $date) {
+        $schedules = Scheduled::select('id', 'name', 'telefone', 'scheduled_time', 'status')
+            ->where('users_id', $barberId)
+            ->where('scheduled_day', $date)
+            ->get();
+
+        return response()->json($schedules);
+    }
+
+    $schedules = Scheduled::join('workloads', 'scheduleds.scheduled_time', '=', 'workloads.id')
+        ->select('scheduleds.id', 'scheduleds.name', 'scheduleds.email', 'scheduleds.telefone', 'scheduleds.scheduled_time', 'scheduleds.status', 'workloads.hour')
+        ->get();
+
+    return response()->json($schedules);
+}
+
+
+    public function cancelAppointment($id)
+    {
+        if(isset($id) && $id) {
+            $verifyStatus = Scheduled::findOrFail($id);
+            if($verifyStatus->status === 0) {
+                return response()->json(['message' => 'Agendamento já cancelado'], 400);
+            }
+            $schedule = Scheduled::where('id', $id)->update(['status' => 0]);
+            
+            if ($schedule) {
+                return response()->json(['message' => 'Agendamento cancelado com sucesso'], 200);
+            } else {
+                return response()->json(['message' => 'Erro ao cancelar agendamento'], 500);
+            }
+        }
+    }
+
+
 }
