@@ -1203,6 +1203,8 @@ table {
 
 .modal-area-agn {
   display: flex;
+  margin: 0 auto;
+  margin-top: 30vh;
   flex-direction: column;
   border-radius: 20px;
   background-color: #FFFFFF;
@@ -1446,7 +1448,8 @@ margin-top: 1vh;
   margin-bottom: 0.2vh;
   font-size: 1.2rem;
   color: #47525E;
-  border: 1px solid #969FAA;
+  border: none;
+  margin-left: 10px;
 }
 
 .filtros-agn-area{
