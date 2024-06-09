@@ -1542,6 +1542,15 @@ margin-top: 1vh;
 
 }
 
+
+.main-produto{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+
 .produto-unt{
   width: 25%;
   text-align: center;
