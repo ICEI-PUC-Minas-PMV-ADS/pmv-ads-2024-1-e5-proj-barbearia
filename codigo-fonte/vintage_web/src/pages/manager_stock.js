@@ -3,8 +3,11 @@ import React, { useEffect, useState } from 'react';
 
 
 
+
+
 const ManagerStock= () => {
-    
+
+   
 
     return (
         <div className="manager-funcionarios-area">
