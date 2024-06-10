@@ -2,6 +2,7 @@ import React from 'react';
 import Rodape from './rodape';
 import Cabecalho from './cabecalho';
 
+
 const Homepage = () => {
     return (
         <div>
@@ -29,8 +30,8 @@ const Homepage = () => {
                     </div>
 
                     <div className="prod1">
-                        <img src="/imagens/pomada.png" alt="Pomada modeladora" className="product-image" />
-                        <p className="textoProd"> POMADA<br></br>MODELADORA</p>
+                        <img src="/imagens/gel-tiger.png" alt="Gel p/ cabelo" className="product-image" />
+                        <p className="textoProd"> GEL P/ CABELO</p>
                     </div>
 
                     <div className="prod1">
@@ -44,16 +45,15 @@ const Homepage = () => {
                     </div>
                 </div>
 
-                <div className="hpAreaExtra2">
-
-
-                </div>
-
                 <div className="hpArea3">
-
+                    <div className='areaTexto3'>
+                        <p className='textoRoupas'>TAMBÉM TEMOS UM VESTUÁRIO <br></br> DIVERSO DE ROUPAS, <br></br>
+                            VENHA CONFERIR EM NOSSA BARBEARIA! </p>
+                    </div>
+                    <div className='prod2'>
+                        <img src="/imagens/hpBermudas.png" alt="Bermudas" className="product-image2" />
+                    </div>
                 </div>
-
-
             </div>
             <Rodape />
         </div>

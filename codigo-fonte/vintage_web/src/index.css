@@ -293,6 +293,9 @@ table {
 .hpConteudo {
   width: 100%;
   background-color: #EAEAEA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hpArea1 {
@@ -348,7 +351,7 @@ table {
 .hpAreaExtra {
   width: 100%;
   height: 50px;
-  margin-top: 13%;
+  margin-top: 4%;
 }
 
 .hpTexto2 {
@@ -376,8 +379,8 @@ table {
   width: 100%;
   height: 50px;
   display: flex;
-  text-align: center;
-  margin-top: 10px;
+  margin-top: 45px;
+  justify-content: center;
 }
 
 .prod1 {
@@ -402,9 +405,53 @@ table {
 }
 
 .hpArea3 {
-  width: 100%;
-  height: 400px;
+  width: 75%;
+  display: flex;
+  background-color: #BFA46D;
+  border-radius: 6vh;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
+
+.hpTexto3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  color: #3D3028;
+  line-height: 100px;
+  font-weight: 700;
+}
+
+.prod2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+.product-image2 {
+  width: 50%;
+}
+
+.areaTexto3 {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+
+.textoRoupas {
+  font-family: monospace;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 2;
+}
+
 
 /*Sobre*/
 
@@ -1065,7 +1112,7 @@ table {
 }
 
 
-.texto-lista-funcionario{
+.texto-lista-funcionario {
   font-weight: 700;
   margin-left: 5vh;
   font-size: 1.2rem;
@@ -1099,7 +1146,7 @@ table {
 
 }
 
-.manager-employer-area{
+.manager-employer-area {
   width: 100%;
   height: 100%;
   display: flex;
@@ -1149,23 +1196,24 @@ table {
   justify-content: center;
 }
 
-.status-area{
+.status-area {
   font-size: 1rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.status-area p{
+
+.status-area p {
   font-size: 1rem !important;
-  
+
 }
 
 #incluir-funcionario {
   display: none;
 }
 
-#alterar-agendamento{
+#alterar-agendamento {
   display: none;
 }
 
@@ -1245,7 +1293,7 @@ table {
   transition: 0.2s ease;
 }
 
-.btn-dropdown{
+.btn-dropdown {
   font-size: 0.9rem;
   cursor: pointer;
   transform: scale(1.1);
@@ -1254,10 +1302,10 @@ table {
   border-radius: 1.5vh;
   border: none;
   font-weight: 400;
-  
+
 }
 
-.dropdown-folga{
+.dropdown-folga {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -1269,8 +1317,8 @@ table {
   margin-top: 1vh;
 }
 
-.dropdown-folga a{
-  
+.dropdown-folga a {
+
   border-radius: 1.5vh;
   color: black;
   text-align: center;
@@ -1278,10 +1326,10 @@ table {
   padding: 1vh 2vh 1vh 2vh;
 }
 
-.dropdown-folga a:hover{
+.dropdown-folga a:hover {
   font-weight: 500;
   background-color: #adadad;
-  
+
 }
 
 .modal-cab {
@@ -1293,7 +1341,7 @@ table {
 
 }
 
-.modal-cab-agn{
+.modal-cab-agn {
   width: 100%;
   display: flex;
   align-items: center;
@@ -1302,7 +1350,7 @@ table {
 
 }
 
-.modal-foo-agn{
+.modal-foo-agn {
   width: 100%;
   display: flex;
   align-items: center;
@@ -1390,7 +1438,7 @@ table {
 
 /*Agenda*/
 
-.agenda-area{
+.agenda-area {
   width: 100%;
   background-color: #FFFFFF;
   border-radius: 3vh;
@@ -1400,12 +1448,12 @@ table {
   padding: 3vh;
 }
 
-.agenda-data-area{
+.agenda-data-area {
   width: 100%;
   margin-bottom: 2vh;
 }
 
-.drop-agenda{
+.drop-agenda {
   padding: 2vh 6vh 2vh 6vh;
   border-radius: 4vh;
   font-weight: 700;
@@ -1416,16 +1464,17 @@ table {
   font-size: 1.3rem;
   color: #47525E;
 }
-.barbeiros-dropdown{
-position: absolute;
-display: flex;
-flex-direction: column;
-background-color: #FFFFFF;
-margin-left: 3vh;
-padding: 2vh 6vh 0vh 6vh;
-border-radius: 3vh;
-border: 1px solid #969FAA;
-margin-top: 1vh;
+
+.barbeiros-dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  margin-left: 3vh;
+  padding: 2vh 6vh 0vh 6vh;
+  border-radius: 3vh;
+  border: 1px solid #969FAA;
+  margin-top: 1vh;
 }
 
 .barbeiros-dropdown a {
@@ -1436,10 +1485,10 @@ margin-top: 1vh;
 }
 
 .barbeiros-dropdown a:hover {
-    color: black;
+  color: black;
 }
 
-.data-agenda{
+.data-agenda {
   padding: 2vh 1vh;
   border-radius: 4vh;
   font-weight: 700;
@@ -1452,20 +1501,20 @@ margin-top: 1vh;
   margin-left: 10px;
 }
 
-.filtros-agn-area{
+.filtros-agn-area {
   width: 100%;
   display: flex;
   flex-direction: row;
   margin-top: 2vh;
 }
 
-.filtros-agn-area p{
+.filtros-agn-area p {
   color: #47525E;
   font-weight: 700;
   font-size: 1.1rem;
 }
 
-.agendamento-unt{
+.agendamento-unt {
   width: 100%;
   border-radius: 4vh;
   border: 1px solid #969FAA;
@@ -1476,26 +1525,26 @@ margin-top: 1vh;
 
 }
 
-.div-filtro-agn{
+.div-filtro-agn {
   width: 16.66%;
   display: flex;
   justify-content: center;
 }
 
-.btn-editar-agn{
+.btn-editar-agn {
   font-size: 1rem;
   cursor: pointer;
   color: #3D3028;
 }
 
-.div-agn-txt{
+.div-agn-txt {
   width: 16.66%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
 }
 
-.div-agn-txt p{
+.div-agn-txt p {
   color: #47525E;
   font-weight: 500;
   font-size: 1.1rem;
@@ -1503,7 +1552,7 @@ margin-top: 1vh;
 
 /* Estoque */
 
-.estoque-area{
+.estoque-area {
   width: 100%;
   background-color: #FFFFFF;
   height: 100%;
@@ -1513,7 +1562,7 @@ margin-top: 1vh;
 
 }
 
-.estoque-filtro{
+.estoque-filtro {
   width: 100%;
   border: solid 1px #969FAA;
   border-radius: 5vh;
@@ -1522,7 +1571,7 @@ margin-top: 1vh;
   padding: 2vh;
 }
 
-.filtro-unt{
+.filtro-unt {
   width: 25%;
   text-align: center;
 }
@@ -1532,7 +1581,7 @@ margin-top: 1vh;
   color: #47525E;
 }
 
-.produto-estoque{
+.produto-estoque {
   width: 100%;
   padding: 1vh;
   background-color: #E5E5E5;
@@ -1543,7 +1592,7 @@ margin-top: 1vh;
 }
 
 
-.main-produto{
+.main-produto {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1551,73 +1600,16 @@ margin-top: 1vh;
 }
 
 
-.produto-unt{
+.produto-unt {
   width: 25%;
   text-align: center;
 }
 
-.produtos-estoque-area{
+.produtos-estoque-area {
   margin-top: 2vh;
 }
 
-/* Relatórios */
 
-.bloco-agn-relatorios{
-
-  width: 60%;
-  border: 1px solid #8492A6;
-  border-radius: 1vh;
-  background-color: #F3F3F3;
-  padding: 1.5vh;
-  margin-bottom: 2vh;
-
-}
-
-.titulo-agn-relatorio{
-  font-weight: 700;
-  color: #47525E;
-  font-size: 1.2rem;
-}
-
-.filtro-relatorios{
-  width: 100%;
-  background-color: #DCECFF;
-  border-radius: 1vh;
-  padding: 1.5vh;
-  margin-top: 1.5vh;
-  display: flex;
-
-}
-.tit-filtro-relatorios{
-  width: 33.33%;
-  text-align: center;
-  color: #47525E;
-
-}
-
-.tit-filtro{
-  font-weight: bold;
-  color: #47525E;
-}
-
-.dados-relatorios-unt{
-  display: flex;
-  width: 100%;
-  margin-bottom: 1vh;
-}
-
-.dados-relatorios-area{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5vh;
-
-}
-
-.dados-agn-relatorios{
-  width: 33.33%;
-  text-align: center;
-}
 
 
 /* RESPONSIVIDADE */
@@ -1711,6 +1703,22 @@ margin-top: 1vh;
 
   .prod1 {
     width: 100%;
+  }
+
+  .hpArea3{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prod2{
+    width: 100%;
+  }
+
+  .areaTexto3{
+    width: 100%;
+    padding: 1vh;
+    justify-content: center;
   }
 
   .HomepageMenu {
