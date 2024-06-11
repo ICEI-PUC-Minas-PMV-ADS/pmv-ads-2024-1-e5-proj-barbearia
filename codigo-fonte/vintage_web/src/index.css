@@ -1609,7 +1609,64 @@ table {
   margin-top: 2vh;
 }
 
+/* Relatórios */
 
+.bloco-agn-relatorios{
+
+  width: 60%;
+  border: 1px solid #8492A6;
+  border-radius: 1vh;
+  background-color: #F3F3F3;
+  padding: 1.5vh;
+  margin-bottom: 2vh;
+
+}
+
+.titulo-agn-relatorio{
+  font-weight: 700;
+  color: #47525E;
+  font-size: 1.2rem;
+}
+
+.filtro-relatorios{
+  width: 100%;
+  background-color: #DCECFF;
+  border-radius: 1vh;
+  padding: 1.5vh;
+  margin-top: 1.5vh;
+  display: flex;
+
+}
+.tit-filtro-relatorios{
+  width: 33.33%;
+  text-align: center;
+  color: #47525E;
+
+}
+
+.tit-filtro{
+  font-weight: bold;
+  color: #47525E;
+}
+
+.dados-relatorios-unt{
+  display: flex;
+  width: 100%;
+  margin-bottom: 1vh;
+}
+
+.dados-relatorios-area{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5vh;
+
+}
+
+.dados-agn-relatorios{
+  width: 33.33%;
+  text-align: center;
+}
 
 
 /* RESPONSIVIDADE */
