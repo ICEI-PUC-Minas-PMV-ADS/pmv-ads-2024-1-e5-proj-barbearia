@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -46,6 +47,13 @@ Route::prefix('/schedule')->group(function () {
     Route::post('/finalize-scheduling', [ServiceController::class, 'finalizeScheduling']);
     Route::get('/get-schedule/{barberId?}/{date?}', [ServiceController::class, 'getSchedules']);
     Route::post('cancel-appointment/{id}', [ServiceController::class, 'cancelAppointment']);
+});
+
+Route::prefix('/products')->group(function () {
+    Route::get('/get-products', [ProductController::class, 'getProducts']);
+    Route::post('/register', [ProductController::class, 'register']);
+    Route::delete('/delete/{id}', [ProductController::class, 'deleteProduct']);
+    Route::put('/update/{id}', [ProductController::class, 'updateProduct']);
 });
 
 Route::post('/contact-us', [ContactController::class, 'contact']);
