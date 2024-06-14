@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -54,6 +55,11 @@ Route::prefix('/products')->group(function () {
     Route::post('/register', [ProductController::class, 'register']);
     Route::delete('/delete/{id}', [ProductController::class, 'deleteProduct']);
     Route::put('/update/{id}', [ProductController::class, 'updateProduct']);
+});
+    
+Route::prefix('/report')->group(function () {
+        Route::post('/schedules', [ReportController::class, 'getSchedules']);
+        Route::get('/values', [ReportController::class, 'getValues']);
 });
 
 Route::post('/contact-us', [ContactController::class, 'contact']);
