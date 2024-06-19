@@ -1,0 +1,26 @@
+message: Please cite this software using these metadata.
+title: Barbearia Vintage
+authors:
+  - family-names: de Souza Ferreira
+    given-names:  Gabriel
+  - family-names: França Alves Miranda
+    given-names: Gabriela
+  - family-names: Correa Gomes
+    given-names: Guilherme 
+  - family-names: Damasceno Pinto
+    given-names: Lucas 
+  - family-names: Julia Estevam Correa
+    given-names: Mariana 
+  - family-names: de Souza Ferreira
+    given-names: Pedro 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Wilson da Costa
+    given-names: José 
+keywords:
+  - Gestão
+  - Barbearia
+  - Agendamentos
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-barbearia
+version: 1.0.0
+date-released: 2024-02-01
