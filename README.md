@@ -43,4 +43,4 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Apresentação
 
- [Apresentação final do projeto]()
+ [Apresentação final do projeto](https://www.youtube.com/watch?v=qio9aIcN59c)
